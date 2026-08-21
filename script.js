@@ -1870,5 +1870,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
   );
+  /* ================= PWA INSTALL ================= */
 
+  let deferredPrompt = null;
+
+  const installBtn = document.getElementById("installBtn");
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+
+    if (installBtn) {
+      installBtn.style.display = "block";
+    }
+  });
+
+  if (installBtn) {
+    installBtn.addEventListener("click", async () => {
+      if (!deferredPrompt) return;
+
+      deferredPrompt.prompt();
+
+      const { outcome } = await deferredPrompt.userChoice;
+
+      if (outcome === "accepted") {
+        installBtn.style.display = "none";
+      }
+
+      deferredPrompt = null;
+    });
+  }
+
+  window.addEventListener("appinstalled", () => {
+    if (installBtn) {
+      installBtn.style.display = "none";
+    }
+  });
 });
