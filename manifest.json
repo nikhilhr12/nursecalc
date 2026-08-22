@@ -1,6 +1,6 @@
 {
-  "name": "NurseCalc",
-  "short_name": "NurseCalc",
+  "name": "MedSafeCalc",
+"short_name": "MedSafeCalc",
   "description": "Nursing clinical calculators and study tools",
   "start_url": "./",
   "display": "standalone",
