@@ -1907,3 +1907,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+/* ================= SEARCH ================= */
+
+const searchBtn = document.getElementById("searchBtn");
+const searchPanel = document.getElementById("searchPanel");
+const searchInput = document.getElementById("searchInput");
+const closeSearchBtn = document.getElementById("closeSearchBtn");
+const searchResults = document.getElementById("searchResults");
+
+if (
+  searchBtn &&
+  searchPanel &&
+  searchInput &&
+  closeSearchBtn &&
+  searchResults
+) {
+
+  searchBtn.addEventListener("click", () => {
+    searchPanel.style.display = "block";
+    searchInput.focus();
+  });
+
+  closeSearchBtn.addEventListener("click", () => {
+    searchPanel.style.display = "none";
+    searchInput.value = "";
+    searchResults.innerHTML = "";
+  });
+
+  searchInput.addEventListener("input", () => {
+
+    const query = searchInput.value.trim().toLowerCase();
+
+    searchResults.innerHTML = "";
+
+    if (!query) return;
+
+    const items = document.querySelectorAll(
+      ".calculator-card, .alert-card, .small-card, .study-card, .safety-card"
+    );
+
+    items.forEach((item) => {
+
+      const text = item.innerText.toLowerCase();
+
+      if (text.includes(query)) {
+
+        const result = document.createElement("button");
+
+        result.type = "button";
+        result.className = "search-result";
+        result.innerText = item.innerText.trim();
+
+        result.addEventListener("click", () => {
+
+          item.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+          searchPanel.style.display = "none";
+          searchInput.value = "";
+          searchResults.innerHTML = "";
+
+        });
+
+        searchResults.appendChild(result);
+      }
+
+    });
+
+    if (!searchResults.children.length) {
+
+      searchResults.innerHTML =
+        `<div class="no-search-result">No results found.</div>`;
+
+    }
+
+  });
+
+}
