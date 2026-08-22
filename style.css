@@ -1549,13 +1549,12 @@ body.nc-girl .hero-card {
 /* Individual decorations */
 .welcome-deco {
   position: absolute;
-
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-
   line-height: 1;
   user-select: none;
+  z-index: 5;
 }
 
 /* Plus */
