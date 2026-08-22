@@ -1986,3 +1986,56 @@ if (
   });
 
 }
+/* =========================================================
+   FIRST TIME NAME SETUP
+   ========================================================= */
+
+const welcomeSetup = document.getElementById("welcomeSetup");
+const userNameInput = document.getElementById("userNameInput");
+const continueBtn = document.getElementById("continueBtn");
+
+const savedUserName = localStorage.getItem("medSafeUserName");
+
+function updateWelcomeMessage(name, returning = false) {
+  const welcomeHeading = document.querySelector(".welcome-card h2");
+  const welcomeText = document.querySelector(".welcome-card p");
+
+  if (welcomeHeading) {
+    welcomeHeading.textContent = returning
+      ? `Welcome back, ${name} 👋`
+      : `Welcome, ${name} 👋`;
+  }
+
+  if (welcomeText) {
+    welcomeText.textContent = returning
+      ? "Great to see you again! Let's continue calculating with confidence."
+      : "Great to have you here! Let's start calculating with confidence.";
+  }
+}
+
+if (savedUserName) {
+  if (welcomeSetup) {
+    welcomeSetup.style.display = "none";
+  }
+
+  updateWelcomeMessage(savedUserName, true);
+}
+
+if (continueBtn && userNameInput) {
+  continueBtn.addEventListener("click", () => {
+    const name = userNameInput.value.trim();
+
+    if (!name) {
+      userNameInput.focus();
+      return;
+    }
+
+    localStorage.setItem("medSafeUserName", name);
+
+    if (welcomeSetup) {
+      welcomeSetup.style.display = "none";
+    }
+
+    updateWelcomeMessage(name, false);
+  });
+}
