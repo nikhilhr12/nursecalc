@@ -1517,3 +1517,155 @@ body.nc-girl .hero-card {
 #continueBtn:hover {
   background: var(--primary-dark);
 }
+/* =========================================================
+   WELCOME CARD — MEDICAL DECORATIONS
+   ========================================================= */
+
+.welcome-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove old single stethoscope pseudo-icon */
+.welcome-icon::before {
+  content: none !important;
+}
+
+.welcome-icon {
+  position: absolute !important;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 125px !important;
+  height: 125px !important;
+
+  display: block !important;
+
+  font-size: 0 !important;
+  opacity: 1 !important;
+}
+
+/* Individual decorations */
+.welcome-deco {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1;
+  user-select: none;
+}
+
+/* Plus */
+.welcome-deco.plus {
+  top: 8px;
+  right: 10px;
+
+  font-size: 55px;
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.22);
+}
+
+/* Heart */
+.welcome-deco.heart {
+  top: 12px;
+  right: 8px;
+
+  font-size: 48px;
+
+  color: rgba(255, 255, 255, 0.24);
+}
+
+/* Stethoscope */
+.welcome-deco.stethoscope {
+  left: 25px;
+  bottom: 12px;
+
+  font-size: 54px;
+
+  opacity: 0.9;
+
+  filter: drop-shadow(
+    0 4px 8px rgba(0, 0, 0, 0.12)
+  );
+}
+
+/* Mask */
+.welcome-deco.mask {
+  right: 8px;
+  bottom: 10px;
+
+  font-size: 38px;
+
+  opacity: 0.82;
+
+  transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   BOY THEME
+   ========================================================= */
+
+body.nc-boy .welcome-deco.plus {
+  color: rgba(255, 255, 255, 0.24);
+}
+
+body.nc-boy .welcome-deco.stethoscope {
+  opacity: 0.95;
+}
+
+body.nc-boy .welcome-deco.mask {
+  opacity: 0.78;
+}
+
+
+/* =========================================================
+   GIRL THEME
+   ========================================================= */
+
+body.nc-girl .welcome-deco.heart {
+  color: rgba(255, 255, 255, 0.30);
+}
+
+body.nc-girl .welcome-deco.stethoscope {
+  opacity: 0.95;
+}
+
+body.nc-girl .welcome-deco.mask {
+  opacity: 0.78;
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .welcome-icon {
+    right: 4px;
+    width: 105px !important;
+    height: 105px !important;
+  }
+
+  .welcome-deco.plus {
+    font-size: 45px;
+  }
+
+  .welcome-deco.heart {
+    font-size: 40px;
+  }
+
+  .welcome-deco.stethoscope {
+    font-size: 46px;
+    left: 18px;
+  }
+
+  .welcome-deco.mask {
+    font-size: 32px;
+  }
+}
