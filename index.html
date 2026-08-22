@@ -46,14 +46,40 @@
       </div>
 
       <button
-        class="icon-button"
-        type="button"
-        aria-label="Search"
-      >
-        🔍
-      </button>
+  id="searchBtn"
+  class="icon-button"
+  type="button"
+  aria-label="Search"
+>
+  🔍
+</button>
 
     </header>
+    <!-- SEARCH PANEL -->
+<div id="searchPanel" class="search-panel" style="display:none;">
+
+  <div class="search-box">
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search medicines, calculators, topics..."
+      autocomplete="off"
+    >
+
+    <button
+      id="closeSearchBtn"
+      type="button"
+      aria-label="Close Search"
+    >
+      ✕
+    </button>
+
+  </div>
+
+  <div id="searchResults" class="search-results"></div>
+
+</div>
     <button
   id="installBtn"
   type="button"
