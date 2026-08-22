@@ -1393,11 +1393,27 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
   if (welcomeIcon) {
-    welcomeIcon.innerHTML = "🩺";
-    welcomeIcon.classList.add(
-      "nc-stethoscope"
-    );
+
+  welcomeIcon.classList.remove("nc-stethoscope");
+
+  const isGirl =
+    document.body.classList.contains("nc-girl");
+
+  if (isGirl) {
+    welcomeIcon.innerHTML = `
+      <span class="welcome-deco heart">♥️</span>
+      <span class="welcome-deco stethoscope">🩺</span>
+      <span class="welcome-deco mask">😷</span>
+    `;
+  } else {
+    welcomeIcon.innerHTML = `
+      <span class="welcome-deco plus">➕</span>
+      <span class="welcome-deco stethoscope">🩺</span>
+      <span class="welcome-deco mask">😷</span>
+    `;
   }
+
+}
 
 
   /* ---------------------------------------------------------
