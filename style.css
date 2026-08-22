@@ -1407,3 +1407,113 @@ body.nc-girl .hero-card {
 .nc-gender-choice:hover {
   background: #eef5f5;
 }
+/* =========================================================
+   FIRST TIME WELCOME SETUP
+   ========================================================= */
+
+.welcome-setup {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: var(--bg);
+}
+
+.setup-card {
+  width: min(420px, 100%);
+
+  padding: 30px 24px;
+
+  text-align: center;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: 26px;
+
+  box-shadow: 0 18px 55px rgba(28, 75, 68, 0.15);
+}
+
+.setup-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  background: var(--primary-light);
+
+  border-radius: 22px;
+
+  font-size: 34px;
+}
+
+.setup-card h2 {
+  margin-bottom: 8px;
+
+  color: var(--text);
+
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.setup-card p {
+  margin-bottom: 20px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.setup-card input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  outline: none;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-size: 16px;
+
+  text-align: center;
+}
+
+.setup-card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(21, 150, 126, 0.12);
+}
+
+#continueBtn {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 14px;
+
+  border-radius: 13px;
+
+  background: var(--primary);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#continueBtn:hover {
+  background: var(--primary-dark);
+}
