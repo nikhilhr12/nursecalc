@@ -99,6 +99,63 @@
       </button>
 
     </header>
+    <div id="mainMenu" class="main-menu" style="display:none;">
+
+  <button type="button" data-menu="profile">
+    👤 Profile
+  </button>
+
+  <button type="button" data-menu="appearance">
+    🌙 Dark / Light Mode
+  </button>
+
+  <button type="button" data-menu="theme">
+    🎨 Theme
+  </button>
+
+  <button type="button" data-menu="query">
+    💬 Query / Suggestion
+  </button>
+
+    </div>
+    <!-- PROFILE PANEL -->
+<div id="profilePanel" class="profile-panel" style="display:none;">
+
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <span>👤</span>
+      <h2>My Profile</h2>
+      <button id="closeProfileBtn" type="button">×</button>
+    </div>
+
+    <div class="profile-field">
+      <label>Name</label>
+      <input id="profileName" type="text" placeholder="Enter your name">
+    </div>
+
+    <div class="profile-field">
+      <label>Age</label>
+      <input id="profileAge" type="number" placeholder="Enter your age">
+    </div>
+
+    <div class="profile-field">
+      <label>Gender</label>
+      <select id="profileGender">
+        <option value="">Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <button id="saveProfileBtn" type="button">
+      Save Profile
+    </button>
+
+  </div>
+
+</div>
     <!-- SEARCH PANEL -->
 <div id="searchPanel" class="search-panel" style="display:none;">
 
