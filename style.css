@@ -1668,3 +1668,36 @@ body.nc-girl .welcome-deco.mask {
     font-size: 32px;
   }
 }
+
+/* ================================
+   MAIN MENU
+================================ */
+
+.main-menu {
+  position: absolute;
+  top: 78px;
+  right: 16px;
+  width: 230px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+}
+
+.main-menu button {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.main-menu button:hover {
+  background: #f1f5f5;
+}
