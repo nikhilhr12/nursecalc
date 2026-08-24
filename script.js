@@ -2055,10 +2055,11 @@ if (continueBtn && userNameInput) {
     updateWelcomeMessage(name, false);
   });
 }
-const menuBtn = document.getElementById("menuBtn");
+   const menuBtn = document.getElementById("menuBtn");
 const mainMenu = document.getElementById("mainMenu");
 
 if (menuBtn && mainMenu) {
+
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -2068,6 +2069,7 @@ if (menuBtn && mainMenu) {
   });
 
   document.addEventListener("click", (e) => {
+
     if (
       mainMenu.style.display === "block" &&
       !mainMenu.contains(e.target) &&
@@ -2075,5 +2077,7 @@ if (menuBtn && mainMenu) {
     ) {
       mainMenu.style.display = "none";
     }
+
   });
 }
+});
