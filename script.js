@@ -2203,6 +2203,43 @@ if (closeProfileBtn) {
 
 }
 
+   /* =========================================
+   DARK / LIGHT MODE
+========================================= */
+
+const appearanceBtn = document.getElementById("menuAppearanceBtn");
+
+function applyAppearance(mode) {
+    document.body.classList.toggle("dark-mode", mode === "dark");
+
+    localStorage.setItem("medSafeAppearance", mode);
+}
+
+function loadAppearance() {
+    const savedMode =
+        localStorage.getItem("medSafeAppearance") || "light";
+
+    applyAppearance(savedMode);
+}
+
+if (appearanceBtn) {
+    appearanceBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isDark =
+            document.body.classList.contains("dark-mode");
+
+        applyAppearance(isDark ? "light" : "dark");
+
+        // Close main menu
+        if (mainMenu) {
+            mainMenu.style.display = "none";
+        }
+    });
+}
+
+loadAppearance();
 
 loadProfile();
 });
