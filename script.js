@@ -2080,4 +2080,128 @@ if (menuBtn && mainMenu) {
 
   });
 }
+/* =========================================================
+   PROFILE — SAVE / EDIT / LOAD
+========================================================= */
+
+const profileBtn = document.querySelector(
+  '#mainMenu button[data-menu="profile"]'
+);
+
+const profilePanel = document.getElementById("profilePanel");
+
+const profileName = document.getElementById("profileName");
+const profileAge = document.getElementById("profileAge");
+const profileGender = document.getElementById("profileGender");
+
+const saveProfileBtn = document.getElementById("saveProfileBtn");
+const closeProfileBtn = document.getElementById("closeProfileBtn");
+
+
+function loadProfile() {
+
+  const savedProfile = JSON.parse(
+    localStorage.getItem("medSafeProfile") || "null"
+  );
+
+  if (!savedProfile) return;
+
+  profileName.value = savedProfile.name || "";
+  profileAge.value = savedProfile.age || "";
+  profileGender.value = savedProfile.gender || "";
+}
+
+
+function openProfile() {
+
+  loadProfile();
+
+  if (profilePanel) {
+    profilePanel.style.display = "block";
+  }
+
+  if (mainMenu) {
+    mainMenu.style.display = "none";
+  }
+}
+
+
+function closeProfile() {
+
+  if (profilePanel) {
+    profilePanel.style.display = "none";
+  }
+}
+
+
+if (profileBtn && profilePanel) {
+
+  profileBtn.addEventListener("click", (e) => {
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    openProfile();
+
+  });
+
+}
+
+
+if (saveProfileBtn) {
+
+  saveProfileBtn.addEventListener("click", () => {
+
+    const profile = {
+
+      name: profileName.value.trim(),
+
+      age: profileAge.value.trim(),
+
+      gender: profileGender.value
+
+    };
+
+
+    localStorage.setItem(
+      "medSafeProfile",
+      JSON.stringify(profile)
+    );
+
+
+    // Welcome card ka naam bhi update rahe
+    if (profile.name) {
+
+      localStorage.setItem(
+        "medSafeUserName",
+        profile.name
+      );
+
+      if (typeof updateWelcomeMessage === "function") {
+        updateWelcomeMessage(profile.name, true);
+      }
+
+    }
+
+
+    // Save ke baad profile close
+    closeProfile();
+
+  });
+
+}
+
+
+if (closeProfileBtn) {
+
+  closeProfileBtn.addEventListener("click", () => {
+
+    closeProfile();
+
+  });
+
+}
+
+
+loadProfile();
 });
