@@ -1831,92 +1831,100 @@ body.nc-girl .welcome-deco.mask {
     }
 }
 
-/* =========================================
-   DARK MODE
-========================================= */
+/* =========================================================
+   MEDSAFECALC — DARK MODE
+   COMPLETE VISIBILITY & CONTRAST FIX
+   ========================================================= */
 
 body.dark-mode {
     background: #121212 !important;
     color: #f5f5f5 !important;
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 body.dark-mode header {
     background: #181818 !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
 }
+
+body.dark-mode header *,
+body.dark-mode .header *,
+body.dark-mode .app-header * {
+    color: #ffffff !important;
+}
+
+body.dark-mode header p,
+body.dark-mode header span {
+    color: #d0d0d0 !important;
+}
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
 
 body.dark-mode main {
     background: #121212 !important;
+    color: #f5f5f5 !important;
 }
 
-body.dark-mode .calculator-card,
-body.dark-mode .calc-card,
-body.dark-mode .welcome-card,
-body.dark-mode .profile-card,
-body.dark-mode .search-panel,
-body.dark-mode .main-menu {
-    background: #1e1e1e !important;
+body.dark-mode section {
     color: #f5f5f5 !important;
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff !important;
+}
+
 body.dark-mode p,
 body.dark-mode span,
 body.dark-mode label,
 body.dark-mode strong {
-    color: #f5f5f5;
-}
-
-body.dark-mode input,
-body.dark-mode select {
-    background: #2a2a2a !important;
-    color: #ffffff !important;
-    border-color: #444 !important;
-}
-
-body.dark-mode .main-menu {
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-/* =========================================
-   DARK MODE - FULL VISIBILITY FIX
-   ========================================= */
-
-/* Main text */
-body.dark-mode {
-    background: #121212 !important;
-    color: #f5f5f5 !important;
-}
-
-/* Header */
-body.dark-mode header {
-    background: #181818 !important;
-    color: #ffffff !important;
-}
-
-body.dark-mode header * {
-    color: #ffffff !important;
-}
-
-/* Calculator cards */
-body.dark-mode .calculator-card,
-body.dark-mode .calc-card,
-body.dark-mode .profile-card,
-body.dark-mode .search-panel {
-    background: #1e1e1e !important;
-    color: #f5f5f5 !important;
-}
-
-/* Card text */
-body.dark-mode .calculator-card *,
-body.dark-mode .calc-card *,
-body.dark-mode .profile-card *,
-body.dark-mode .search-panel * {
     color: #f5f5f5 !important;
 }
 
 /* Secondary / description text */
+body.dark-mode small,
+body.dark-mode .subtitle,
+body.dark-mode .description,
+body.dark-mode .card-description {
+    color: #cfcfcf !important;
+}
+
+/* =========================================================
+   CALCULATOR CARDS
+   ========================================================= */
+
+body.dark-mode .calculator-card,
+body.dark-mode .calc-card,
+body.dark-mode .welcome-card,
+body.dark-mode .profile-card,
+body.dark-mode .search-panel,
+body.dark-mode .calculator-item,
+body.dark-mode .tool-card {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .calculator-card *,
+body.dark-mode .calc-card *,
+body.dark-mode .welcome-card *,
+body.dark-mode .profile-card *,
+body.dark-mode .search-panel *,
+body.dark-mode .calculator-item *,
+body.dark-mode .tool-card * {
+    color: #f5f5f5 !important;
+}
+
 body.dark-mode .calculator-card p,
 body.dark-mode .calc-card p,
 body.dark-mode .calculator-card span,
@@ -1924,18 +1932,133 @@ body.dark-mode .calc-card span {
     color: #cfcfcf !important;
 }
 
-/* Main menu */
-body.dark-mode .main-menu {
+/* =========================================================
+   OTHER CALCULATORS / GRID CARDS
+   ========================================================= */
+
+body.dark-mode .other-card,
+body.dark-mode .tool-grid,
+body.dark-mode .tool-item {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .other-card *,
+body.dark-mode .tool-grid *,
+body.dark-mode .tool-item * {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .other-card p,
+body.dark-mode .tool-item p {
+    color: #cfcfcf !important;
+}
+
+/* =========================================================
+   WELCOME CARD
+   ========================================================= */
+
+body.dark-mode .welcome-card {
+    color: #ffffff !important;
+}
+
+body.dark-mode .welcome-card h1,
+body.dark-mode .welcome-card h2,
+body.dark-mode .welcome-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .welcome-card p,
+body.dark-mode .welcome-card span {
+    color: #eeeeee !important;
+}
+
+/* =========================================================
+   HIGH ALERT CALCULATORS
+   ========================================================= */
+
+body.dark-mode .high-alert-card {
     background: #1e1e1e !important;
     color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+body.dark-mode .high-alert-card * {
+    color: #ffffff !important;
+}
+
+body.dark-mode .high-alert-card p,
+body.dark-mode .high-alert-card span {
+    color: #d5d5d5 !important;
+}
+
+/* =========================================================
+   NURSING STUDY
+   ========================================================= */
+
+body.dark-mode .study-card,
+body.dark-mode .nursing-study,
+body.dark-mode .study-section {
+    background: #17483f !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .study-card *,
+body.dark-mode .nursing-study *,
+body.dark-mode .study-section * {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   CLINICAL SAFETY
+   ========================================================= */
+
+body.dark-mode .clinical-safety {
+    background: #29271f !important;
+    color: #ffffff !important;
+    border-color: #665f45 !important;
+}
+
+body.dark-mode .clinical-safety * {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .clinical-safety p,
+body.dark-mode .clinical-safety span {
+    color: #d6d6d6 !important;
+}
+
+/* =========================================================
+   MAIN MENU / THREE DOT MENU
+   ========================================================= */
+
+body.dark-mode .main-menu,
+body.dark-mode .menu,
+body.dark-mode .dropdown-menu {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
 body.dark-mode .main-menu *,
-body.dark-mode .main-menu button {
+body.dark-mode .menu *,
+body.dark-mode .dropdown-menu * {
     color: #ffffff !important;
 }
 
-/* Inputs and selects */
+body.dark-mode .main-menu button,
+body.dark-mode .menu button,
+body.dark-mode .dropdown-menu button {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+/* =========================================================
+   INPUTS / SELECTS / TEXTAREAS
+   ========================================================= */
+
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
@@ -1947,28 +2070,72 @@ body.dark-mode textarea {
 body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
     color: #aaaaaa !important;
+    opacity: 1 !important;
 }
 
-/* Labels */
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+    background: #303030 !important;
+    color: #ffffff !important;
+    border-color: #14a38b !important;
+    outline: none !important;
+}
+
+/* Input labels */
 body.dark-mode label {
     color: #f5f5f5 !important;
 }
 
-/* Buttons */
-body.dark-mode button {
-    color: #ffffff;
+/* Input unit text */
+body.dark-mode .input-unit,
+body.dark-mode .unit,
+body.dark-mode .suffix {
+    color: #cccccc !important;
 }
 
-/* Modal / popup */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+body.dark-mode button {
+    color: #ffffff !important;
+}
+
+body.dark-mode .calculate-btn,
+body.dark-mode .calculate-button,
+body.dark-mode #calculateBtn {
+    background: #159f8b !important;
+    color: #ffffff !important;
+    border-color: #159f8b !important;
+}
+
+body.dark-mode button:hover {
+    filter: brightness(1.08);
+}
+
+/* =========================================================
+   MODAL / POPUP
+   ========================================================= */
+
+/* Overlay */
+body.dark-mode .modal-overlay,
+body.dark-mode .overlay {
+    background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* All common modal containers */
 body.dark-mode .modal,
 body.dark-mode .modal-content,
 body.dark-mode .calculator-modal,
 body.dark-mode .calculator-popup,
 body.dark-mode [role="dialog"] {
     background: #1e1e1e !important;
-    color: #f5f5f5 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
 }
 
+/* EVERYTHING inside modal */
 body.dark-mode .modal *,
 body.dark-mode .modal-content *,
 body.dark-mode .calculator-modal *,
@@ -1977,23 +2144,142 @@ body.dark-mode [role="dialog"] * {
     color: #f5f5f5 !important;
 }
 
+/* Modal headings */
+body.dark-mode .modal h1,
+body.dark-mode .modal h2,
+body.dark-mode .modal h3,
+body.dark-mode .modal h4,
+body.dark-mode .calculator-modal h1,
+body.dark-mode .calculator-modal h2,
+body.dark-mode .calculator-modal h3,
+body.dark-mode [role="dialog"] h1,
+body.dark-mode [role="dialog"] h2,
+body.dark-mode [role="dialog"] h3 {
+    color: #ffffff !important;
+}
+
+/* Modal descriptions */
+body.dark-mode .modal p,
+body.dark-mode .modal span,
+body.dark-mode .modal label,
+body.dark-mode .calculator-modal p,
+body.dark-mode .calculator-modal span,
+body.dark-mode .calculator-modal label,
+body.dark-mode [role="dialog"] p,
+body.dark-mode [role="dialog"] span,
+body.dark-mode [role="dialog"] label {
+    color: #e0e0e0 !important;
+}
+
 /* Modal inputs */
 body.dark-mode .modal input,
 body.dark-mode .modal select,
 body.dark-mode .modal textarea,
 body.dark-mode .modal-content input,
 body.dark-mode .modal-content select,
-body.dark-mode .modal-content textarea {
+body.dark-mode .modal-content textarea,
+body.dark-mode .calculator-modal input,
+body.dark-mode .calculator-modal select,
+body.dark-mode .calculator-modal textarea,
+body.dark-mode [role="dialog"] input,
+body.dark-mode [role="dialog"] select,
+body.dark-mode [role="dialog"] textarea {
     background: #2a2a2a !important;
     color: #ffffff !important;
     border-color: #555555 !important;
 }
 
-/* Bottom navigation */
+body.dark-mode .modal input::placeholder,
+body.dark-mode .modal textarea::placeholder,
+body.dark-mode .calculator-modal input::placeholder,
+body.dark-mode .calculator-modal textarea::placeholder,
+body.dark-mode [role="dialog"] input::placeholder,
+body.dark-mode [role="dialog"] textarea::placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Modal header */
+body.dark-mode .modal-header,
+body.dark-mode .calculator-modal-header,
+body.dark-mode .popup-header {
+    color: #ffffff !important;
+}
+
+/* Modal close button */
+body.dark-mode .modal-close,
+body.dark-mode .close-modal,
+body.dark-mode .close-btn {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   PROFILE PANEL
+   ========================================================= */
+
+body.dark-mode #profilePanel,
+body.dark-mode .profile-panel {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode #profilePanel *,
+body.dark-mode .profile-panel * {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode #profilePanel input,
+body.dark-mode #profilePanel select,
+body.dark-mode .profile-panel input,
+body.dark-mode .profile-panel select {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+body.dark-mode #saveProfileBtn {
+    background: #159f8b !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   RECENT CALCULATIONS
+   ========================================================= */
+
+body.dark-mode .recent-calculations {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .recent-calculations *,
+body.dark-mode .recent-calculations h2,
+body.dark-mode .recent-calculations h3 {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .recent-calculation,
+body.dark-mode .recent-item {
+    background: #292929 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .recent-calculation *,
+body.dark-mode .recent-item * {
+    color: #f5f5f5 !important;
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
 body.dark-mode .bottom-nav,
-body.dark-mode .bottom-navigation {
+body.dark-mode .bottom-navigation,
+body.dark-mode nav.bottom-nav {
     background: #181818 !important;
     color: #ffffff !important;
+    border-color: #333333 !important;
 }
 
 body.dark-mode .bottom-nav *,
@@ -2001,32 +2287,86 @@ body.dark-mode .bottom-navigation * {
     color: #ffffff !important;
 }
 
-/* Recent calculations */
-body.dark-mode .recent-calculations {
-    background: #1e1e1e !important;
-    color: #f5f5f5 !important;
+body.dark-mode .bottom-nav .active,
+body.dark-mode .bottom-navigation .active {
+    color: #21b89f !important;
 }
 
-body.dark-mode .recent-calculations * {
-    color: #f5f5f5 !important;
-}
+/* =========================================================
+   LINKS
+   ========================================================= */
 
-/* High-alert cards */
-body.dark-mode .high-alert-card {
-    background: #1e1e1e !important;
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode .high-alert-card * {
-    color: #f5f5f5 !important;
-}
-
-/* Clinical safety */
-body.dark-mode .clinical-safety {
-    color: #f5f5f5 !important;
-}
-
-/* Links */
 body.dark-mode a {
-    color: #8ee8dc !important;
+    color: #75d8c5 !important;
 }
+
+body.dark-mode a:hover {
+    color: #9be8da !important;
+}
+
+/* =========================================================
+   DIVIDERS / BORDERS
+   ========================================================= */
+
+body.dark-mode hr {
+    border-color: #444444 !important;
+}
+
+body.dark-mode .divider {
+    background: #444444 !important;
+}
+
+/* =========================================================
+   ICON / BADGE CONTAINERS
+   ========================================================= */
+
+body.dark-mode .icon-box,
+body.dark-mode .icon-container,
+body.dark-mode .calculator-icon {
+    border-color: #444444 !important;
+}
+
+/* Keep emoji / image visibility normal */
+body.dark-mode img,
+body.dark-mode svg {
+    filter: none !important;
+}
+
+/* =========================================================
+   ACCESSIBILITY — NO INVISIBLE TEXT
+   ========================================================= */
+
+body.dark-mode .text-muted {
+    color: #bdbdbd !important;
+}
+
+body.dark-mode .muted,
+body.dark-mode .secondary-text {
+    color: #c8c8c8 !important;
+}
+
+/* =========================================================
+   FINAL GLOBAL CONTRAST SAFETY
+   ========================================================= */
+
+body.dark-mode .calculator-card h1,
+body.dark-mode .calculator-card h2,
+body.dark-mode .calculator-card h3,
+body.dark-mode .calculator-card h4,
+body.dark-mode .calculator-card p,
+body.dark-mode .calculator-card span,
+
+body.dark-mode .calc-card h1,
+body.dark-mode .calc-card h2,
+body.dark-mode .calc-card h3,
+body.dark-mode .calc-card h4,
+body.dark-mode .calc-card p,
+body.dark-mode .calc-card span,
+
+body.dark-mode .profile-card h1,
+body.dark-mode .profile-card h2,
+body.dark-mode .profile-card h3,
+body.dark-mode .profile-card p,
+body.dark-mode .profile-card span {
+    opacity: 1 !important;
+   }
