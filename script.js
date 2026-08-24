@@ -1923,6 +1923,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
 /* ================= SEARCH ================= */
 
 const searchBtn = document.getElementById("searchBtn");
