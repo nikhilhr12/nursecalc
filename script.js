@@ -2055,3 +2055,25 @@ if (continueBtn && userNameInput) {
     updateWelcomeMessage(name, false);
   });
 }
+const menuBtn = document.getElementById("menuBtn");
+const mainMenu = document.getElementById("mainMenu");
+
+if (menuBtn && mainMenu) {
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    const isOpen = mainMenu.style.display === "block";
+
+    mainMenu.style.display = isOpen ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      mainMenu.style.display === "block" &&
+      !mainMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      mainMenu.style.display = "none";
+    }
+  });
+}
