@@ -1701,3 +1701,6 @@ body.nc-girl .welcome-deco.mask {
 .main-menu button:hover {
   background: #f1f5f5;
 }
+.nc-top-controls {
+  display: none !important;
+}
