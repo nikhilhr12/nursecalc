@@ -1922,8 +1922,8 @@ document.addEventListener("DOMContentLoaded", () => {
       installBtn.style.display = "none";
     }
   });
-});
-document.addEventListener("DOMContentLoaded", () => {
+
+
 /* ================= SEARCH ================= */
 
 const searchBtn = document.getElementById("searchBtn");
