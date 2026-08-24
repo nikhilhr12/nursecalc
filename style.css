@@ -1878,3 +1878,155 @@ body.dark-mode select {
 body.dark-mode .main-menu {
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
+
+/* =========================================
+   DARK MODE - FULL VISIBILITY FIX
+   ========================================= */
+
+/* Main text */
+body.dark-mode {
+    background: #121212 !important;
+    color: #f5f5f5 !important;
+}
+
+/* Header */
+body.dark-mode header {
+    background: #181818 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode header * {
+    color: #ffffff !important;
+}
+
+/* Calculator cards */
+body.dark-mode .calculator-card,
+body.dark-mode .calc-card,
+body.dark-mode .profile-card,
+body.dark-mode .search-panel {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
+/* Card text */
+body.dark-mode .calculator-card *,
+body.dark-mode .calc-card *,
+body.dark-mode .profile-card *,
+body.dark-mode .search-panel * {
+    color: #f5f5f5 !important;
+}
+
+/* Secondary / description text */
+body.dark-mode .calculator-card p,
+body.dark-mode .calc-card p,
+body.dark-mode .calculator-card span,
+body.dark-mode .calc-card span {
+    color: #cfcfcf !important;
+}
+
+/* Main menu */
+body.dark-mode .main-menu {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .main-menu *,
+body.dark-mode .main-menu button {
+    color: #ffffff !important;
+}
+
+/* Inputs and selects */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Labels */
+body.dark-mode label {
+    color: #f5f5f5 !important;
+}
+
+/* Buttons */
+body.dark-mode button {
+    color: #ffffff;
+}
+
+/* Modal / popup */
+body.dark-mode .modal,
+body.dark-mode .modal-content,
+body.dark-mode .calculator-modal,
+body.dark-mode .calculator-popup,
+body.dark-mode [role="dialog"] {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .modal *,
+body.dark-mode .modal-content *,
+body.dark-mode .calculator-modal *,
+body.dark-mode .calculator-popup *,
+body.dark-mode [role="dialog"] * {
+    color: #f5f5f5 !important;
+}
+
+/* Modal inputs */
+body.dark-mode .modal input,
+body.dark-mode .modal select,
+body.dark-mode .modal textarea,
+body.dark-mode .modal-content input,
+body.dark-mode .modal-content select,
+body.dark-mode .modal-content textarea {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+/* Bottom navigation */
+body.dark-mode .bottom-nav,
+body.dark-mode .bottom-navigation {
+    background: #181818 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .bottom-nav *,
+body.dark-mode .bottom-navigation * {
+    color: #ffffff !important;
+}
+
+/* Recent calculations */
+body.dark-mode .recent-calculations {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .recent-calculations * {
+    color: #f5f5f5 !important;
+}
+
+/* High-alert cards */
+body.dark-mode .high-alert-card {
+    background: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .high-alert-card * {
+    color: #f5f5f5 !important;
+}
+
+/* Clinical safety */
+body.dark-mode .clinical-safety {
+    color: #f5f5f5 !important;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #8ee8dc !important;
+}
