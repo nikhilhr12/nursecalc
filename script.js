@@ -2203,21 +2203,26 @@ if (closeProfileBtn) {
 
 }
 
-   /* =========================================
+/* =========================================
    DARK / LIGHT MODE
 ========================================= */
 
 const appearanceBtn = document.getElementById("menuAppearanceBtn");
 
 function applyAppearance(mode) {
-    document.body.classList.toggle("dark-mode", mode === "dark");
+    const isDark = mode === "dark";
 
-    localStorage.setItem("medSafeAppearance", mode);
+    document.body.classList.toggle("nc-dark", isDark);
+
+    localStorage.setItem(
+        "nurseCalcTheme",
+        isDark ? "dark" : "light"
+    );
 }
 
 function loadAppearance() {
     const savedMode =
-        localStorage.getItem("medSafeAppearance") || "light";
+        localStorage.getItem("nurseCalcTheme") || "light";
 
     applyAppearance(savedMode);
 }
@@ -2228,11 +2233,12 @@ if (appearanceBtn) {
         e.stopPropagation();
 
         const isDark =
-            document.body.classList.contains("dark-mode");
+            document.body.classList.contains("nc-dark");
 
-        applyAppearance(isDark ? "light" : "dark");
+        applyAppearance(
+            isDark ? "light" : "dark"
+        );
 
-        // Close main menu
         if (mainMenu) {
             mainMenu.style.display = "none";
         }
@@ -2242,4 +2248,4 @@ if (appearanceBtn) {
 loadAppearance();
 
 loadProfile();
-});
+});     
