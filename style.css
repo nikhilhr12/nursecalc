@@ -2370,3 +2370,481 @@ body.dark-mode .profile-card p,
 body.dark-mode .profile-card span {
     opacity: 1 !important;
    }
+
+/* =========================================================
+   MEDSAFE CALC — DARK MODE TEXT & CARD VISIBILITY FIX
+   ========================================================= */
+
+body.dark-mode {
+
+  /* ---------- MAIN TEXT ---------- */
+
+  color: #f5f7f7;
+}
+
+
+/* ---------- HEADINGS & NORMAL TEXT ---------- */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode strong,
+body.dark-mode small,
+body.dark-mode label,
+body.dark-mode span {
+  color: #f1f5f4;
+}
+
+
+/* ---------- SECTION LABELS ---------- */
+
+body.dark-mode .section-label {
+  color: #8fe3d3;
+}
+
+body.dark-mode .high-alert-label {
+  color: #ff9a8e;
+}
+
+
+/* =========================================================
+   CALCULATOR CARDS
+   ========================================================= */
+
+body.dark-mode .calculator-card,
+body.dark-mode .alert-card,
+body.dark-mode .small-card {
+
+  background: #1f1f1f;
+  color: #f5f5f5;
+  border-color: #3a3a3a;
+}
+
+
+/* Calculator card text */
+
+body.dark-mode .calculator-card h3,
+body.dark-mode .calculator-card p,
+body.dark-mode .alert-card h3,
+body.dark-mode .alert-card p,
+body.dark-mode .small-card strong,
+body.dark-mode .small-card small {
+
+  color: #f5f5f5;
+}
+
+
+/* Secondary text */
+
+body.dark-mode .calculator-card p,
+body.dark-mode .alert-card p,
+body.dark-mode .small-card small {
+
+  color: #b9c2c0;
+}
+
+
+/* Arrows */
+
+body.dark-mode .calculator-card .arrow,
+body.dark-mode .alert-card .arrow {
+
+  color: #d8e2df;
+}
+
+
+/* =========================================================
+   STUDY CARD
+   ========================================================= */
+
+body.dark-mode .study-card {
+  background: #124d43;
+  color: #ffffff;
+}
+
+body.dark-mode .study-card span,
+body.dark-mode .study-card h2,
+body.dark-mode .study-card p {
+  color: #ffffff;
+}
+
+
+/* Study button */
+
+body.dark-mode .study-button {
+  background: #ffffff;
+  color: #124d43;
+}
+
+body.dark-mode .study-button span {
+  color: #124d43;
+}
+
+
+/* =========================================================
+   CLINICAL SAFETY
+   ========================================================= */
+
+body.dark-mode .safety-card {
+
+  background: #26231a;
+  border-color: #4b4634;
+  color: #f5f5f5;
+}
+
+body.dark-mode .safety-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .safety-card p {
+  color: #c9c4b4;
+}
+
+body.dark-mode .safety-icon {
+  color: #e1c96b;
+}
+
+
+/* =========================================================
+   CREATOR
+   ========================================================= */
+
+body.dark-mode .creator-credit strong {
+  color: #ffffff;
+}
+
+body.dark-mode .instagram-credit {
+  color: #8fe3d3;
+}
+
+
+/* =========================================================
+   RECENT CALCULATIONS
+   ========================================================= */
+
+body.dark-mode .recent-calculations,
+body.dark-mode .recent-card,
+body.dark-mode .recent-calculation-card {
+
+  background: #1f1f1f;
+  color: #f5f5f5;
+}
+
+
+/* Recent calculation headings */
+
+body.dark-mode .recent-calculations h2,
+body.dark-mode .recent-calculations h3,
+body.dark-mode .recent-calculations strong {
+
+  color: #ffffff;
+}
+
+
+/* Recent calculation text */
+
+body.dark-mode .recent-calculations p,
+body.dark-mode .recent-calculations small {
+
+  color: #bfc8c6;
+}
+
+
+/* Clear button */
+
+body.dark-mode .recent-calculations button {
+
+  background: #ffffff;
+  color: #173f38;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+body.dark-mode .main-menu {
+
+  background: #202020;
+  color: #ffffff;
+}
+
+body.dark-mode .main-menu button {
+
+  color: #ffffff;
+  background: transparent;
+}
+
+body.dark-mode .main-menu button:hover {
+
+  background: #2c2c2c;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+body.dark-mode .profile-panel {
+  color: #ffffff;
+}
+
+body.dark-mode .profile-card {
+
+  background: #202020;
+  color: #ffffff;
+}
+
+body.dark-mode .profile-card h2,
+body.dark-mode .profile-card label {
+
+  color: #ffffff;
+}
+
+
+/* Profile inputs */
+
+body.dark-mode .profile-card input,
+body.dark-mode .profile-card select {
+
+  background: #292929;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode .profile-card input::placeholder {
+
+  color: #999999;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+body.dark-mode .search-panel,
+body.dark-mode .search-box {
+
+  background: #202020;
+  color: #ffffff;
+}
+
+body.dark-mode #searchInput {
+
+  background: #292929;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode #searchInput::placeholder {
+
+  color: #999999;
+}
+
+body.dark-mode .search-results {
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CALCULATOR MODALS
+   ========================================================= */
+
+body.dark-mode .modal,
+body.dark-mode .calculator-modal,
+body.dark-mode .modal-content {
+
+  color: #f5f5f5;
+}
+
+
+/* Modal headings */
+
+body.dark-mode .modal h2,
+body.dark-mode .modal h3,
+body.dark-mode .calculator-modal h2,
+body.dark-mode .calculator-modal h3 {
+
+  color: #ffffff;
+}
+
+
+/* Modal labels */
+
+body.dark-mode .modal label,
+body.dark-mode .calculator-modal label {
+
+  color: #dce5e2;
+}
+
+
+/* Modal paragraphs */
+
+body.dark-mode .modal p,
+body.dark-mode .calculator-modal p {
+
+  color: #bfc8c6;
+}
+
+
+/* =========================================================
+   MODAL INPUTS
+   ========================================================= */
+
+body.dark-mode .modal input,
+body.dark-mode .modal select,
+body.dark-mode .modal textarea,
+body.dark-mode .calculator-modal input,
+body.dark-mode .calculator-modal select,
+body.dark-mode .calculator-modal textarea {
+
+  background: #292929;
+  color: #ffffff;
+  border-color: #454545;
+}
+
+
+/* Placeholder */
+
+body.dark-mode .modal input::placeholder,
+body.dark-mode .calculator-modal input::placeholder {
+
+  color: #999999;
+}
+
+
+/* Units: mg / mL / mg/mL */
+
+body.dark-mode .modal .unit,
+body.dark-mode .calculator-modal .unit,
+body.dark-mode .input-unit,
+body.dark-mode .unit-label {
+
+  background: #eeeeee;
+  color: #555555;
+}
+
+
+/* Select text */
+
+body.dark-mode .modal select,
+body.dark-mode .calculator-modal select {
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CALCULATE BUTTON
+   ========================================================= */
+
+body.dark-mode .modal button,
+body.dark-mode .calculator-modal button {
+
+  color: #ffffff;
+}
+
+
+/* Main calculate button */
+
+body.dark-mode .modal button[type="submit"],
+body.dark-mode .calculator-modal button[type="submit"],
+body.dark-mode .calculate-btn {
+
+  background: #159f8b;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+body.dark-mode .modal .close,
+body.dark-mode .calculator-modal .close,
+body.dark-mode .modal .close-btn,
+body.dark-mode .calculator-modal .close-btn {
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BOTTOM NAV
+   ========================================================= */
+
+body.dark-mode .bottom-nav {
+
+  background: #151515;
+  border-top-color: #333333;
+}
+
+body.dark-mode .bottom-nav .nav-item {
+
+  color: #aeb8b5;
+}
+
+body.dark-mode .bottom-nav .nav-item.active {
+
+  color: #8fe3d3;
+}
+
+body.dark-mode .bottom-nav small {
+
+  color: inherit;
+}
+
+
+/* =========================================================
+   SEE ALL BUTTON
+   ========================================================= */
+
+body.dark-mode .text-button {
+
+  color: #8fe3d3;
+}
+
+
+/* =========================================================
+   ICON BACKGROUNDS
+   ========================================================= */
+
+body.dark-mode .calculator-icon,
+body.dark-mode .alert-icon {
+
+  background: #dff5f1;
+}
+
+
+/* =========================================================
+   INSTALL BUTTON
+   ========================================================= */
+
+body.dark-mode #installBtn {
+
+  background: #15967e !important;
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   IMPORTANT — PREVENT INVISIBLE TEXT
+   ========================================================= */
+
+body.dark-mode button {
+  text-shadow: none;
+}
+
+
+/* Disabled elements should still remain readable */
+
+body.dark-mode button:disabled,
+body.dark-mode input:disabled,
+body.dark-mode select:disabled {
+
+  opacity: 1;
+  color: #bfc8c6;
+}
