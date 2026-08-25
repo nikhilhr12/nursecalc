@@ -1289,32 +1289,6 @@ body.nc-girl .hero {
   ) !important;
 }
 
-/* ---------- DARK MODE ---------- */
-
-body.nc-dark {
-  background: #101615 !important;
-  color: #eeeeee !important;
-}
-
-body.nc-dark .app,
-body.nc-dark main,
-body.nc-dark .main-content {
-  background: #101615 !important;
-  color: #eeeeee !important;
-}
-
-body.nc-dark .calculator-card,
-body.nc-dark .recent-card,
-body.nc-dark .safety-card {
-  background: #1b2523 !important;
-  color: #eeeeee !important;
-}
-
-body.nc-dark .nc-recent-card {
-  background: #1b2523 !important;
-  color: #eeeeee !important;
-}
-
 /* ---------- STETHOSCOPE ---------- */
 
 /* Hide the broken square/icon */
@@ -1339,34 +1313,6 @@ body.nc-dark .nc-recent-card {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
-}
-/* ===== NurseCalc Theme & Gender Colors ===== */
-
-/* Dark Mode */
-body.nc-dark {
-  background: #101820 !important;
-  color: #f5f7fa !important;
-}
-
-body.nc-dark .app,
-body.nc-dark main,
-body.nc-dark section,
-body.nc-dark .card {
-  background: #101820 !important;
-  color: #f5f7fa !important;
-}
-
-body.nc-dark .nc-card,
-body.nc-dark .calculator-card,
-body.nc-dark .recent-card {
-  background: #1b2733 !important;
-  color: #ffffff !important;
-}
-
-body.nc-dark p,
-body.nc-dark small,
-body.nc-dark span {
-  color: #d7dee5 !important;
 }
 
 /* Boy Theme */
@@ -1832,754 +1778,565 @@ body.nc-girl .welcome-deco.mask {
 }
 
 /* =========================================================
-   MEDSAFECALC — DARK MODE
-   COMPLETE VISIBILITY & CONTRAST FIX
+   NURSECALC — FINAL THEME SYSTEM
+   ONE CLEAN LIGHT + DARK MODE BLOCK
    ========================================================= */
 
-body.dark-mode {
-    background: #121212 !important;
-    color: #f5f5f5 !important;
-}
 
 /* =========================================================
-   HEADER
+   LIGHT MODE — DEFAULT
    ========================================================= */
 
-body.dark-mode header {
-    background: #181818 !important;
-    color: #ffffff !important;
-    border-color: #333333 !important;
+body:not(.nc-dark) {
+    background: #f5f8f7 !important;
+    color: #173b36 !important;
 }
 
-body.dark-mode header *,
-body.dark-mode .header *,
-body.dark-mode .app-header * {
-    color: #ffffff !important;
+/* Main layout */
+body:not(.nc-dark) main,
+body:not(.nc-dark) .app,
+body:not(.nc-dark) .main-content {
+    background: #f5f8f7 !important;
+    color: #173b36 !important;
 }
 
-body.dark-mode header p,
-body.dark-mode header span {
-    color: #d0d0d0 !important;
+/* Header */
+body:not(.nc-dark) header,
+body:not(.nc-dark) .app-header,
+body:not(.nc-dark) .header {
+    background: #ffffff !important;
+    color: #173b36 !important;
+    border-color: #e1e8e5 !important;
 }
+
+/* Normal text */
+body:not(.nc-dark) h1,
+body:not(.nc-dark) h2,
+body:not(.nc-dark) h3,
+body:not(.nc-dark) h4,
+body:not(.nc-dark) h5,
+body:not(.nc-dark) h6,
+body:not(.nc-dark) p,
+body:not(.nc-dark) label,
+body:not(.nc-dark) strong {
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) small,
+body:not(.nc-dark) .subtitle,
+body:not(.nc-dark) .description,
+body:not(.nc-dark) .card-description {
+    color: #60736e !important;
+}
+
 
 /* =========================================================
-   MAIN PAGE
+   LIGHT MODE — CARDS
    ========================================================= */
 
-body.dark-mode main {
-    background: #121212 !important;
-    color: #f5f5f5 !important;
+body:not(.nc-dark) .calculator-card,
+body:not(.nc-dark) .calc-card,
+body:not(.nc-dark) .recent-card,
+body:not(.nc-dark) .nc-recent-card,
+body:not(.nc-dark) .nc-recent-section,
+body:not(.nc-dark) .other-card,
+body:not(.nc-dark) .tool-card,
+body:not(.nc-dark) .tool-item,
+body:not(.nc-dark) .small-card,
+body:not(.nc-dark) .alert-card {
+    background: #ffffff !important;
+    color: #173b36 !important;
+    border-color: #dce7e3 !important;
 }
 
-body.dark-mode section {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-    color: #ffffff !important;
-}
-
-body.dark-mode p,
-body.dark-mode span,
-body.dark-mode label,
-body.dark-mode strong {
-    color: #f5f5f5 !important;
-}
-
-/* Secondary / description text */
-body.dark-mode small,
-body.dark-mode .subtitle,
-body.dark-mode .description,
-body.dark-mode .card-description {
-    color: #cfcfcf !important;
-}
 
 /* =========================================================
-   CALCULATOR CARDS
+   LIGHT MODE — INPUTS
    ========================================================= */
 
-body.dark-mode .calculator-card,
-body.dark-mode .calc-card,
-body.dark-mode .welcome-card,
-body.dark-mode .profile-card,
-body.dark-mode .search-panel,
-body.dark-mode .calculator-item,
-body.dark-mode .tool-card {
-    background: #1e1e1e !important;
-    color: #f5f5f5 !important;
-    border-color: #444444 !important;
+body:not(.nc-dark) input,
+body:not(.nc-dark) select,
+body:not(.nc-dark) textarea {
+    background: #ffffff !important;
+    color: #173b36 !important;
+    border-color: #cfdcd8 !important;
 }
 
-body.dark-mode .calculator-card *,
-body.dark-mode .calc-card *,
-body.dark-mode .welcome-card *,
-body.dark-mode .profile-card *,
-body.dark-mode .search-panel *,
-body.dark-mode .calculator-item *,
-body.dark-mode .tool-card * {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode .calculator-card p,
-body.dark-mode .calc-card p,
-body.dark-mode .calculator-card span,
-body.dark-mode .calc-card span {
-    color: #cfcfcf !important;
-}
-
-/* =========================================================
-   OTHER CALCULATORS / GRID CARDS
-   ========================================================= */
-
-body.dark-mode .other-card,
-body.dark-mode .tool-grid,
-body.dark-mode .tool-item {
-    background: #1e1e1e !important;
-    color: #f5f5f5 !important;
-    border-color: #444444 !important;
-}
-
-body.dark-mode .other-card *,
-body.dark-mode .tool-grid *,
-body.dark-mode .tool-item * {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode .other-card p,
-body.dark-mode .tool-item p {
-    color: #cfcfcf !important;
-}
-
-/* =========================================================
-   WELCOME CARD
-   ========================================================= */
-
-body.dark-mode .welcome-card {
-    color: #ffffff !important;
-}
-
-body.dark-mode .welcome-card h1,
-body.dark-mode .welcome-card h2,
-body.dark-mode .welcome-card h3 {
-    color: #ffffff !important;
-}
-
-body.dark-mode .welcome-card p,
-body.dark-mode .welcome-card span {
-    color: #eeeeee !important;
-}
-
-/* =========================================================
-   HIGH ALERT CALCULATORS
-   ========================================================= */
-
-body.dark-mode .high-alert-card {
-    background: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #555555 !important;
-}
-
-body.dark-mode .high-alert-card * {
-    color: #ffffff !important;
-}
-
-body.dark-mode .high-alert-card p,
-body.dark-mode .high-alert-card span {
-    color: #d5d5d5 !important;
-}
-
-/* =========================================================
-   NURSING STUDY
-   ========================================================= */
-
-body.dark-mode .study-card,
-body.dark-mode .nursing-study,
-body.dark-mode .study-section {
-    background: #17483f !important;
-    color: #ffffff !important;
-}
-
-body.dark-mode .study-card *,
-body.dark-mode .nursing-study *,
-body.dark-mode .study-section * {
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   CLINICAL SAFETY
-   ========================================================= */
-
-body.dark-mode .clinical-safety {
-    background: #29271f !important;
-    color: #ffffff !important;
-    border-color: #665f45 !important;
-}
-
-body.dark-mode .clinical-safety * {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode .clinical-safety p,
-body.dark-mode .clinical-safety span {
-    color: #d6d6d6 !important;
-}
-
-/* =========================================================
-   MAIN MENU / THREE DOT MENU
-   ========================================================= */
-
-body.dark-mode .main-menu,
-body.dark-mode .menu,
-body.dark-mode .dropdown-menu {
-    background: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #444444 !important;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
-}
-
-body.dark-mode .main-menu *,
-body.dark-mode .menu *,
-body.dark-mode .dropdown-menu * {
-    color: #ffffff !important;
-}
-
-body.dark-mode .main-menu button,
-body.dark-mode .menu button,
-body.dark-mode .dropdown-menu button {
-    color: #ffffff !important;
-    background: transparent !important;
-}
-
-/* =========================================================
-   INPUTS / SELECTS / TEXTAREAS
-   ========================================================= */
-
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea {
-    background: #2a2a2a !important;
-    color: #ffffff !important;
-    border-color: #555555 !important;
-}
-
-body.dark-mode input::placeholder,
-body.dark-mode textarea::placeholder {
-    color: #aaaaaa !important;
+body:not(.nc-dark) input::placeholder,
+body:not(.nc-dark) textarea::placeholder {
+    color: #8a9a96 !important;
     opacity: 1 !important;
 }
 
-body.dark-mode input:focus,
-body.dark-mode select:focus,
-body.dark-mode textarea:focus {
-    background: #303030 !important;
+
+/* =========================================================
+   LIGHT MODE — BUTTONS
+   ========================================================= */
+
+body:not(.nc-dark) .nc-theme-btn,
+body:not(.nc-dark) .nc-gender-btn,
+body:not(.nc-dark) .nc-control-btn,
+body:not(.nc-dark) .icon-button {
+    background: #ffffff !important;
+    color: #087e6b !important;
+    border-color: #d5e5e0 !important;
+    opacity: 1 !important;
+}
+
+body:not(.nc-dark) .nc-calculate,
+body:not(.nc-dark) .calculate-btn,
+body:not(.nc-dark) .calculate-button,
+body:not(.nc-dark) #calculateBtn {
+    background: #159f8b !important;
     color: #ffffff !important;
-    border-color: #14a38b !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE — RECENT CALCULATIONS
+   ========================================================= */
+
+body:not(.nc-dark) .nc-recent-card,
+body:not(.nc-dark) .nc-recent-section {
+    background: #ffffff !important;
+    color: #173b36 !important;
+    border: 1px solid #dce7e3 !important;
+}
+
+body:not(.nc-dark) .nc-recent-card h2,
+body:not(.nc-dark) .nc-recent-section h2,
+body:not(.nc-dark) .nc-recent-title h2 {
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) .nc-recent-item {
+    background: #f5f9f7 !important;
+    color: #173b36 !important;
+    border-color: #dce7e3 !important;
+}
+
+body:not(.nc-dark) .nc-recent-item strong {
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) .nc-recent-item small {
+    color: #60736e !important;
+}
+
+body:not(.nc-dark) .nc-recent-empty {
+    color: #71827e !important;
+}
+
+body:not(.nc-dark) #ncClearRecent {
+    background: #e7f7f3 !important;
+    color: #087e6b !important;
+}
+
+
+/* =========================================================
+   DARK MODE — MAIN
+   ========================================================= */
+
+body.nc-dark {
+    background: #101615 !important;
+    color: #f1f5f4 !important;
+}
+
+/* Main layout */
+body.nc-dark main,
+body.nc-dark .app,
+body.nc-dark .main-content {
+    background: #101615 !important;
+    color: #f1f5f4 !important;
+}
+
+/* Header */
+body.nc-dark header,
+body.nc-dark .app-header,
+body.nc-dark .header {
+    background: #181e1d !important;
+    color: #ffffff !important;
+    border-color: #303a37 !important;
+}
+
+body.nc-dark header *,
+body.nc-dark .app-header *,
+body.nc-dark .header * {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   DARK MODE — NORMAL TEXT
+   ========================================================= */
+
+body.nc-dark h1,
+body.nc-dark h2,
+body.nc-dark h3,
+body.nc-dark h4,
+body.nc-dark h5,
+body.nc-dark h6,
+body.nc-dark label,
+body.nc-dark strong {
+    color: #ffffff !important;
+}
+
+body.nc-dark p,
+body.nc-dark span {
+    color: #e0e9e6 !important;
+}
+
+body.nc-dark small,
+body.nc-dark .subtitle,
+body.nc-dark .description,
+body.nc-dark .card-description {
+    color: #b9c7c3 !important;
+}
+
+
+/* =========================================================
+   DARK MODE — CARDS
+   ========================================================= */
+
+body.nc-dark .calculator-card,
+body.nc-dark .calc-card,
+body.nc-dark .recent-card,
+body.nc-dark .nc-recent-card,
+body.nc-dark .nc-recent-section,
+body.nc-dark .other-card,
+body.nc-dark .tool-card,
+body.nc-dark .tool-item,
+body.nc-dark .small-card,
+body.nc-dark .alert-card {
+    background: #1c2523 !important;
+    color: #f1f5f4 !important;
+    border-color: #35433f !important;
+}
+
+
+/* Card text */
+body.nc-dark .calculator-card h1,
+body.nc-dark .calculator-card h2,
+body.nc-dark .calculator-card h3,
+body.nc-dark .calculator-card h4,
+body.nc-dark .calc-card h1,
+body.nc-dark .calc-card h2,
+body.nc-dark .calc-card h3,
+body.nc-dark .calc-card h4,
+body.nc-dark .other-card strong,
+body.nc-dark .tool-item strong {
+    color: #ffffff !important;
+}
+
+body.nc-dark .calculator-card p,
+body.nc-dark .calc-card p,
+body.nc-dark .other-card p,
+body.nc-dark .tool-item p {
+    color: #bfcac7 !important;
+}
+
+
+/* =========================================================
+   DARK MODE — INPUTS
+   ========================================================= */
+
+body.nc-dark input,
+body.nc-dark select,
+body.nc-dark textarea {
+    background: #292f2e !important;
+    color: #ffffff !important;
+    border-color: #485552 !important;
+}
+
+body.nc-dark input::placeholder,
+body.nc-dark textarea::placeholder {
+    color: #aebbb8 !important;
+    opacity: 1 !important;
+}
+
+body.nc-dark input:focus,
+body.nc-dark select:focus,
+body.nc-dark textarea:focus {
+    background: #303736 !important;
+    color: #ffffff !important;
+    border-color: #159f8b !important;
     outline: none !important;
 }
 
-/* Input labels */
-body.dark-mode label {
-    color: #f5f5f5 !important;
-}
-
-/* Input unit text */
-body.dark-mode .input-unit,
-body.dark-mode .unit,
-body.dark-mode .suffix {
-    color: #cccccc !important;
-}
 
 /* =========================================================
-   BUTTONS
+   DARK MODE — UNITS
    ========================================================= */
 
-body.dark-mode button {
-    color: #ffffff !important;
+body.nc-dark .input-unit,
+body.nc-dark .unit,
+body.nc-dark .suffix,
+body.nc-dark .unit-label {
+    color: #cbd7d4 !important;
 }
 
-body.dark-mode .calculate-btn,
-body.dark-mode .calculate-button,
-body.dark-mode #calculateBtn {
+
+/* =========================================================
+   DARK MODE — BUTTONS
+   ========================================================= */
+
+body.nc-dark button {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+body.nc-dark .nc-theme-btn,
+body.nc-dark .nc-gender-btn,
+body.nc-dark .nc-control-btn {
+    background: #e7f7f3 !important;
+    color: #087e6b !important;
+    border-color: #c8e8e1 !important;
+}
+
+body.nc-dark .nc-theme-btn *,
+body.nc-dark .nc-gender-btn *,
+body.nc-dark .nc-control-btn * {
+    color: #087e6b !important;
+}
+
+body.nc-dark .nc-calculate,
+body.nc-dark .calculate-btn,
+body.nc-dark .calculate-button,
+body.nc-dark #calculateBtn {
     background: #159f8b !important;
     color: #ffffff !important;
     border-color: #159f8b !important;
 }
 
-body.dark-mode button:hover {
-    filter: brightness(1.08);
-}
 
 /* =========================================================
-   MODAL / POPUP
+   DARK MODE — TOP / THREE-DOT / ICON BUTTON
    ========================================================= */
 
-/* Overlay */
-body.dark-mode .modal-overlay,
-body.dark-mode .overlay {
-    background: rgba(0, 0, 0, 0.72) !important;
+body.nc-dark .icon-button {
+    background: #e7f7f3 !important;
+    color: #087e6b !important;
+    border: 1px solid #c8e8e1 !important;
 }
 
-/* All common modal containers */
-body.dark-mode .modal,
-body.dark-mode .modal-content,
-body.dark-mode .calculator-modal,
-body.dark-mode .calculator-popup,
-body.dark-mode [role="dialog"] {
-    background: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #444444 !important;
+body.nc-dark .icon-button * {
+    color: #087e6b !important;
 }
 
-/* EVERYTHING inside modal */
-body.dark-mode .modal *,
-body.dark-mode .modal-content *,
-body.dark-mode .calculator-modal *,
-body.dark-mode .calculator-popup *,
-body.dark-mode [role="dialog"] * {
-    color: #f5f5f5 !important;
-}
-
-/* Modal headings */
-body.dark-mode .modal h1,
-body.dark-mode .modal h2,
-body.dark-mode .modal h3,
-body.dark-mode .modal h4,
-body.dark-mode .calculator-modal h1,
-body.dark-mode .calculator-modal h2,
-body.dark-mode .calculator-modal h3,
-body.dark-mode [role="dialog"] h1,
-body.dark-mode [role="dialog"] h2,
-body.dark-mode [role="dialog"] h3 {
-    color: #ffffff !important;
-}
-
-/* Modal descriptions */
-body.dark-mode .modal p,
-body.dark-mode .modal span,
-body.dark-mode .modal label,
-body.dark-mode .calculator-modal p,
-body.dark-mode .calculator-modal span,
-body.dark-mode .calculator-modal label,
-body.dark-mode [role="dialog"] p,
-body.dark-mode [role="dialog"] span,
-body.dark-mode [role="dialog"] label {
-    color: #e0e0e0 !important;
-}
-
-/* Modal inputs */
-body.dark-mode .modal input,
-body.dark-mode .modal select,
-body.dark-mode .modal textarea,
-body.dark-mode .modal-content input,
-body.dark-mode .modal-content select,
-body.dark-mode .modal-content textarea,
-body.dark-mode .calculator-modal input,
-body.dark-mode .calculator-modal select,
-body.dark-mode .calculator-modal textarea,
-body.dark-mode [role="dialog"] input,
-body.dark-mode [role="dialog"] select,
-body.dark-mode [role="dialog"] textarea {
-    background: #2a2a2a !important;
-    color: #ffffff !important;
-    border-color: #555555 !important;
-}
-
-body.dark-mode .modal input::placeholder,
-body.dark-mode .modal textarea::placeholder,
-body.dark-mode .calculator-modal input::placeholder,
-body.dark-mode .calculator-modal textarea::placeholder,
-body.dark-mode [role="dialog"] input::placeholder,
-body.dark-mode [role="dialog"] textarea::placeholder {
-    color: #aaaaaa !important;
-}
-
-/* Modal header */
-body.dark-mode .modal-header,
-body.dark-mode .calculator-modal-header,
-body.dark-mode .popup-header {
-    color: #ffffff !important;
-}
-
-/* Modal close button */
-body.dark-mode .modal-close,
-body.dark-mode .close-modal,
-body.dark-mode .close-btn {
-    color: #ffffff !important;
-}
 
 /* =========================================================
-   PROFILE PANEL
+   DARK MODE — MENU
    ========================================================= */
 
-body.dark-mode #profilePanel,
-body.dark-mode .profile-panel {
-    background: #1e1e1e !important;
+body.nc-dark .main-menu,
+body.nc-dark .menu,
+body.nc-dark .dropdown-menu {
+    background: #1c2422 !important;
     color: #ffffff !important;
-    border-color: #444444 !important;
+    border-color: #3a4743 !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,.6) !important;
 }
 
-body.dark-mode #profilePanel *,
-body.dark-mode .profile-panel * {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode #profilePanel input,
-body.dark-mode #profilePanel select,
-body.dark-mode .profile-panel input,
-body.dark-mode .profile-panel select {
-    background: #2a2a2a !important;
+body.nc-dark .main-menu *,
+body.nc-dark .menu *,
+body.nc-dark .dropdown-menu * {
     color: #ffffff !important;
-    border-color: #555555 !important;
 }
 
-body.dark-mode #saveProfileBtn {
+body.nc-dark .main-menu button,
+body.nc-dark .menu button,
+body.nc-dark .dropdown-menu button {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+body.nc-dark .main-menu button:hover,
+body.nc-dark .menu button:hover,
+body.nc-dark .dropdown-menu button:hover {
+    background: #2b3532 !important;
+}
+
+
+/* =========================================================
+   CALCULATOR POPUP — LIGHT MODE
+   ========================================================= */
+
+body:not(.nc-dark) #nurseCalcModal .nc-overlay {
+    background: rgba(0,0,0,.55) !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-modal {
+    background: #ffffff !important;
+    color: #173b36 !important;
+    border-color: #dce7e3 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-modal-body,
+body:not(.nc-dark) #nurseCalcModal .nc-modal-footer {
+    background: #ffffff !important;
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-label {
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-input-wrap {
+    background: #ffffff !important;
+    border-color: #cfdcd8 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-input-wrap input {
+    background: transparent !important;
+    color: #173b36 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-input-wrap span {
+    color: #60736e !important;
+}
+
+
+/* =========================================================
+   CALCULATOR POPUP — DARK MODE
+   ========================================================= */
+
+body.nc-dark #nurseCalcModal .nc-overlay {
+    background: rgba(0,0,0,.78) !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-modal {
+    background: #1c2523 !important;
+    color: #f1f5f4 !important;
+    border: 1px solid #35433f !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-modal-body,
+body.nc-dark #nurseCalcModal .nc-modal-footer {
+    background: #1c2523 !important;
+    color: #f1f5f4 !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-modal-header {
+    color: #ffffff !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-modal-header h2 {
+    color: #ffffff !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-label {
+    color: #e5eeeb !important;
+}
+
+body.nc-dark #nurseCalcModal .nurse-info {
+    color: #45c9ae !important;
+}
+
+
+/* =========================================================
+   CALCULATOR POPUP — DARK INPUTS
+   ========================================================= */
+
+body.nc-dark #nurseCalcModal .nc-input-wrap {
+    background: #292f2e !important;
+    border: 1px solid #485552 !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-input-wrap input {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-input-wrap input::placeholder {
+    color: #aebbb8 !important;
+    opacity: 1 !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-input-wrap span {
+    background: transparent !important;
+    color: #cbd7d4 !important;
+}
+
+body.nc-dark #nurseCalcModal select {
+    background: #292f2e !important;
+    color: #ffffff !important;
+    border-color: #485552 !important;
+}
+
+body.nc-dark #nurseCalcModal select option {
+    background: #292f2e !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   CALCULATOR POPUP — BUTTONS
+   ========================================================= */
+
+body.nc-dark #nurseCalcModal .nc-calculate {
     background: #159f8b !important;
     color: #ffffff !important;
 }
 
-/* =========================================================
-   RECENT CALCULATIONS
-   ========================================================= */
-
-body.dark-mode .recent-calculations {
-    background: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #444444 !important;
-}
-
-body.dark-mode .recent-calculations *,
-body.dark-mode .recent-calculations h2,
-body.dark-mode .recent-calculations h3 {
-    color: #f5f5f5 !important;
-}
-
-body.dark-mode .recent-calculation,
-body.dark-mode .recent-item {
-    background: #292929 !important;
-    color: #ffffff !important;
-    border-color: #444444 !important;
-}
-
-body.dark-mode .recent-calculation *,
-body.dark-mode .recent-item * {
-    color: #f5f5f5 !important;
-}
-
-/* =========================================================
-   BOTTOM NAVIGATION
-   ========================================================= */
-
-body.dark-mode .bottom-nav,
-body.dark-mode .bottom-navigation,
-body.dark-mode nav.bottom-nav {
-    background: #181818 !important;
-    color: #ffffff !important;
-    border-color: #333333 !important;
-}
-
-body.dark-mode .bottom-nav *,
-body.dark-mode .bottom-navigation * {
+body.nc-dark #nurseCalcModal #ncClose {
+    background: rgba(255,255,255,.16) !important;
     color: #ffffff !important;
 }
 
-body.dark-mode .bottom-nav .active,
-body.dark-mode .bottom-navigation .active {
-    color: #21b89f !important;
-}
 
 /* =========================================================
-   LINKS
+   CALCULATOR RESULT
    ========================================================= */
 
-body.dark-mode a {
-    color: #75d8c5 !important;
+body.nc-dark #nurseCalcModal .nc-result {
+    background: #193a34 !important;
+    color: #e0eee9 !important;
+    border-color: #315c53 !important;
 }
 
-body.dark-mode a:hover {
-    color: #9be8da !important;
-}
-
-/* =========================================================
-   DIVIDERS / BORDERS
-   ========================================================= */
-
-body.dark-mode hr {
-    border-color: #444444 !important;
-}
-
-body.dark-mode .divider {
-    background: #444444 !important;
-}
-
-/* =========================================================
-   ICON / BADGE CONTAINERS
-   ========================================================= */
-
-body.dark-mode .icon-box,
-body.dark-mode .icon-container,
-body.dark-mode .calculator-icon {
-    border-color: #444444 !important;
-}
-
-/* Keep emoji / image visibility normal */
-body.dark-mode img,
-body.dark-mode svg {
-    filter: none !important;
-}
-
-/* =========================================================
-   ACCESSIBILITY — NO INVISIBLE TEXT
-   ========================================================= */
-
-body.dark-mode .text-muted {
-    color: #bdbdbd !important;
-}
-
-body.dark-mode .muted,
-body.dark-mode .secondary-text {
-    color: #c8c8c8 !important;
-}
-
-/* =========================================================
-   FINAL GLOBAL CONTRAST SAFETY
-   ========================================================= */
-
-body.dark-mode .calculator-card h1,
-body.dark-mode .calculator-card h2,
-body.dark-mode .calculator-card h3,
-body.dark-mode .calculator-card h4,
-body.dark-mode .calculator-card p,
-body.dark-mode .calculator-card span,
-
-body.dark-mode .calc-card h1,
-body.dark-mode .calc-card h2,
-body.dark-mode .calc-card h3,
-body.dark-mode .calc-card h4,
-body.dark-mode .calc-card p,
-body.dark-mode .calc-card span,
-
-body.dark-mode .profile-card h1,
-body.dark-mode .profile-card h2,
-body.dark-mode .profile-card h3,
-body.dark-mode .profile-card p,
-body.dark-mode .profile-card span {
-    opacity: 1 !important;
-   }
-
-/* =========================================================
-   MEDSAFE CALC — DARK MODE TEXT & CARD VISIBILITY FIX
-   ========================================================= */
-
-body.dark-mode {
-
-  /* ---------- MAIN TEXT ---------- */
-
-  color: #f5f7f7;
-}
-
-
-/* ---------- HEADINGS & NORMAL TEXT ---------- */
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode p,
-body.dark-mode strong,
-body.dark-mode small,
-body.dark-mode label,
-body.dark-mode span {
-  color: #f1f5f4;
-}
-
-
-/* ---------- SECTION LABELS ---------- */
-
-body.dark-mode .section-label {
-  color: #8fe3d3;
-}
-
-body.dark-mode .high-alert-label {
-  color: #ff9a8e;
+body.nc-dark #nurseCalcModal .nc-result * {
+    color: #e0eee9 !important;
 }
 
 
 /* =========================================================
-   CALCULATOR CARDS
+   RECENT CALCULATIONS — DARK MODE
    ========================================================= */
 
-body.dark-mode .calculator-card,
-body.dark-mode .alert-card,
-body.dark-mode .small-card {
-
-  background: #1f1f1f;
-  color: #f5f5f5;
-  border-color: #3a3a3a;
+body.nc-dark .nc-recent-card,
+body.nc-dark .nc-recent-section {
+    background: #1b2523 !important;
+    color: #f5f7f6 !important;
+    border: 1px solid #35443f !important;
 }
 
-
-/* Calculator card text */
-
-body.dark-mode .calculator-card h3,
-body.dark-mode .calculator-card p,
-body.dark-mode .alert-card h3,
-body.dark-mode .alert-card p,
-body.dark-mode .small-card strong,
-body.dark-mode .small-card small {
-
-  color: #f5f5f5;
+body.nc-dark .nc-recent-card h2,
+body.nc-dark .nc-recent-section h2,
+body.nc-dark .nc-recent-title h2 {
+    color: #ffffff !important;
 }
 
-
-/* Secondary text */
-
-body.dark-mode .calculator-card p,
-body.dark-mode .alert-card p,
-body.dark-mode .small-card small {
-
-  color: #b9c2c0;
+body.nc-dark .nc-recent-item {
+    background: #26312f !important;
+    color: #ffffff !important;
+    border: 1px solid #35433f !important;
 }
 
-
-/* Arrows */
-
-body.dark-mode .calculator-card .arrow,
-body.dark-mode .alert-card .arrow {
-
-  color: #d8e2df;
+body.nc-dark .nc-recent-item strong {
+    color: #ffffff !important;
 }
 
-
-/* =========================================================
-   STUDY CARD
-   ========================================================= */
-
-body.dark-mode .study-card {
-  background: #124d43;
-  color: #ffffff;
+body.nc-dark .nc-recent-item small {
+    color: #c9d6d2 !important;
 }
 
-body.dark-mode .study-card span,
-body.dark-mode .study-card h2,
-body.dark-mode .study-card p {
-  color: #ffffff;
+body.nc-dark .nc-recent-empty {
+    color: #bfcfca !important;
 }
 
-
-/* Study button */
-
-body.dark-mode .study-button {
-  background: #ffffff;
-  color: #124d43;
-}
-
-body.dark-mode .study-button span {
-  color: #124d43;
-}
-
-
-/* =========================================================
-   CLINICAL SAFETY
-   ========================================================= */
-
-body.dark-mode .safety-card {
-
-  background: #26231a;
-  border-color: #4b4634;
-  color: #f5f5f5;
-}
-
-body.dark-mode .safety-card h3 {
-  color: #ffffff;
-}
-
-body.dark-mode .safety-card p {
-  color: #c9c4b4;
-}
-
-body.dark-mode .safety-icon {
-  color: #e1c96b;
-}
-
-
-/* =========================================================
-   CREATOR
-   ========================================================= */
-
-body.dark-mode .creator-credit strong {
-  color: #ffffff;
-}
-
-body.dark-mode .instagram-credit {
-  color: #8fe3d3;
-}
-
-
-/* =========================================================
-   RECENT CALCULATIONS
-   ========================================================= */
-
-body.dark-mode .recent-calculations,
-body.dark-mode .recent-card,
-body.dark-mode .recent-calculation-card {
-
-  background: #1f1f1f;
-  color: #f5f5f5;
-}
-
-
-/* Recent calculation headings */
-
-body.dark-mode .recent-calculations h2,
-body.dark-mode .recent-calculations h3,
-body.dark-mode .recent-calculations strong {
-
-  color: #ffffff;
-}
-
-
-/* Recent calculation text */
-
-body.dark-mode .recent-calculations p,
-body.dark-mode .recent-calculations small {
-
-  color: #bfc8c6;
-}
-
-
-/* Clear button */
-
-body.dark-mode .recent-calculations button {
-
-  background: #ffffff;
-  color: #173f38;
-}
-
-
-/* =========================================================
-   MENU
-   ========================================================= */
-
-body.dark-mode .main-menu {
-
-  background: #202020;
-  color: #ffffff;
-}
-
-body.dark-mode .main-menu button {
-
-  color: #ffffff;
-  background: transparent;
-}
-
-body.dark-mode .main-menu button:hover {
-
-  background: #2c2c2c;
+body.nc-dark #ncClearRecent {
+    background: #e7f7f3 !important;
+    color: #087e6b !important;
 }
 
 
@@ -2587,36 +2344,23 @@ body.dark-mode .main-menu button:hover {
    PROFILE
    ========================================================= */
 
-body.dark-mode .profile-panel {
-  color: #ffffff;
+body.nc-dark .profile-panel,
+body.nc-dark .profile-card {
+    background: #1c2523 !important;
+    color: #ffffff !important;
+    border-color: #35433f !important;
 }
 
-body.dark-mode .profile-card {
-
-  background: #202020;
-  color: #ffffff;
+body.nc-dark .profile-card input,
+body.nc-dark .profile-card select {
+    background: #292f2e !important;
+    color: #ffffff !important;
+    border-color: #485552 !important;
 }
 
-body.dark-mode .profile-card h2,
-body.dark-mode .profile-card label {
-
-  color: #ffffff;
-}
-
-
-/* Profile inputs */
-
-body.dark-mode .profile-card input,
-body.dark-mode .profile-card select {
-
-  background: #292929;
-  color: #ffffff;
-  border-color: #444444;
-}
-
-body.dark-mode .profile-card input::placeholder {
-
-  color: #999999;
+body.nc-dark #saveProfileBtn {
+    background: #159f8b !important;
+    color: #ffffff !important;
 }
 
 
@@ -2624,151 +2368,59 @@ body.dark-mode .profile-card input::placeholder {
    SEARCH
    ========================================================= */
 
-body.dark-mode .search-panel,
-body.dark-mode .search-box {
-
-  background: #202020;
-  color: #ffffff;
+body.nc-dark .search-panel,
+body.nc-dark .search-box {
+    background: #1c2523 !important;
+    color: #ffffff !important;
 }
 
-body.dark-mode #searchInput {
-
-  background: #292929;
-  color: #ffffff;
-  border-color: #444444;
+body.nc-dark #searchInput {
+    background: #292f2e !important;
+    color: #ffffff !important;
+    border-color: #485552 !important;
 }
 
-body.dark-mode #searchInput::placeholder {
-
-  color: #999999;
+body.nc-dark #searchInput::placeholder {
+    color: #aebbb8 !important;
 }
 
-body.dark-mode .search-results {
-
-  color: #ffffff;
+body.nc-dark .search-results {
+    color: #ffffff !important;
 }
 
 
 /* =========================================================
-   CALCULATOR MODALS
+   NURSING STUDY
    ========================================================= */
 
-body.dark-mode .modal,
-body.dark-mode .calculator-modal,
-body.dark-mode .modal-content {
-
-  color: #f5f5f5;
+body.nc-dark .study-card,
+body.nc-dark .nursing-study,
+body.nc-dark .study-section {
+    background: #17483f !important;
+    color: #ffffff !important;
 }
 
-
-/* Modal headings */
-
-body.dark-mode .modal h2,
-body.dark-mode .modal h3,
-body.dark-mode .calculator-modal h2,
-body.dark-mode .calculator-modal h3 {
-
-  color: #ffffff;
-}
-
-
-/* Modal labels */
-
-body.dark-mode .modal label,
-body.dark-mode .calculator-modal label {
-
-  color: #dce5e2;
-}
-
-
-/* Modal paragraphs */
-
-body.dark-mode .modal p,
-body.dark-mode .calculator-modal p {
-
-  color: #bfc8c6;
+body.nc-dark .study-card *,
+body.nc-dark .nursing-study *,
+body.nc-dark .study-section * {
+    color: #ffffff !important;
 }
 
 
 /* =========================================================
-   MODAL INPUTS
+   CLINICAL SAFETY
    ========================================================= */
 
-body.dark-mode .modal input,
-body.dark-mode .modal select,
-body.dark-mode .modal textarea,
-body.dark-mode .calculator-modal input,
-body.dark-mode .calculator-modal select,
-body.dark-mode .calculator-modal textarea {
-
-  background: #292929;
-  color: #ffffff;
-  border-color: #454545;
+body.nc-dark .clinical-safety,
+body.nc-dark .safety-card {
+    background: #29271f !important;
+    color: #f5f5f5 !important;
+    border-color: #665f45 !important;
 }
 
-
-/* Placeholder */
-
-body.dark-mode .modal input::placeholder,
-body.dark-mode .calculator-modal input::placeholder {
-
-  color: #999999;
-}
-
-
-/* Units: mg / mL / mg/mL */
-
-body.dark-mode .modal .unit,
-body.dark-mode .calculator-modal .unit,
-body.dark-mode .input-unit,
-body.dark-mode .unit-label {
-
-  background: #eeeeee;
-  color: #555555;
-}
-
-
-/* Select text */
-
-body.dark-mode .modal select,
-body.dark-mode .calculator-modal select {
-
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   CALCULATE BUTTON
-   ========================================================= */
-
-body.dark-mode .modal button,
-body.dark-mode .calculator-modal button {
-
-  color: #ffffff;
-}
-
-
-/* Main calculate button */
-
-body.dark-mode .modal button[type="submit"],
-body.dark-mode .calculator-modal button[type="submit"],
-body.dark-mode .calculate-btn {
-
-  background: #159f8b;
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   CLOSE BUTTON
-   ========================================================= */
-
-body.dark-mode .modal .close,
-body.dark-mode .calculator-modal .close,
-body.dark-mode .modal .close-btn,
-body.dark-mode .calculator-modal .close-btn {
-
-  color: #ffffff;
+body.nc-dark .clinical-safety p,
+body.nc-dark .safety-card p {
+    color: #d6d0bc !important;
 }
 
 
@@ -2776,75 +2428,64 @@ body.dark-mode .calculator-modal .close-btn {
    BOTTOM NAV
    ========================================================= */
 
-body.dark-mode .bottom-nav {
-
-  background: #151515;
-  border-top-color: #333333;
+body.nc-dark .bottom-nav,
+body.nc-dark .bottom-navigation,
+body.nc-dark nav.bottom-nav {
+    background: #151a19 !important;
+    color: #ffffff !important;
+    border-color: #333d3a !important;
 }
 
-body.dark-mode .bottom-nav .nav-item {
-
-  color: #aeb8b5;
+body.nc-dark .bottom-nav *,
+body.nc-dark .bottom-navigation * {
+    color: #ffffff !important;
 }
 
-body.dark-mode .bottom-nav .nav-item.active {
-
-  color: #8fe3d3;
-}
-
-body.dark-mode .bottom-nav small {
-
-  color: inherit;
+body.nc-dark .bottom-nav .active,
+body.nc-dark .bottom-navigation .active {
+    color: #8fe3d3 !important;
 }
 
 
 /* =========================================================
-   SEE ALL BUTTON
+   LINKS
    ========================================================= */
 
-body.dark-mode .text-button {
+body.nc-dark a {
+    color: #75d8c5 !important;
+}
 
-  color: #8fe3d3;
+body.nc-dark a:hover {
+    color: #9be8da !important;
 }
 
 
 /* =========================================================
-   ICON BACKGROUNDS
+   ICONS / IMAGES / SVG
    ========================================================= */
 
-body.dark-mode .calculator-icon,
-body.dark-mode .alert-icon {
-
-  background: #dff5f1;
+body.nc-dark img,
+body.nc-dark svg {
+    filter: none !important;
 }
 
 
 /* =========================================================
-   INSTALL BUTTON
+   FINAL VISIBILITY SAFETY
    ========================================================= */
 
-body.dark-mode #installBtn {
-
-  background: #15967e !important;
-  color: #ffffff !important;
+body.nc-dark #nurseCalcModal *,
+body.nc-dark .nc-recent-card *,
+body.nc-dark .nc-recent-section *,
+body.nc-dark .main-menu *,
+body.nc-dark .dropdown-menu *,
+body.nc-dark .profile-card *,
+body.nc-dark .search-panel * {
+    opacity: 1 !important;
 }
 
-
-/* =========================================================
-   IMPORTANT — PREVENT INVISIBLE TEXT
-   ========================================================= */
-
-body.dark-mode button {
-  text-shadow: none;
-}
-
-
-/* Disabled elements should still remain readable */
-
-body.dark-mode button:disabled,
-body.dark-mode input:disabled,
-body.dark-mode select:disabled {
-
-  opacity: 1;
-  color: #bfc8c6;
+body.nc-dark button:disabled,
+body.nc-dark input:disabled,
+body.nc-dark select:disabled {
+    opacity: 1 !important;
 }
