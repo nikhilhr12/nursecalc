@@ -2489,3 +2489,85 @@ body.nc-dark input:disabled,
 body.nc-dark select:disabled {
     opacity: 1 !important;
 }
+
+/* =========================================================
+   FINAL TEXT VISIBILITY FIX
+   ========================================================= */
+
+/* ---------- NURSING STUDY — LIGHT MODE ---------- */
+
+body:not(.nc-dark) .study-card,
+body:not(.nc-dark) .study-card h2,
+body:not(.nc-dark) .study-card p,
+body:not(.nc-dark) .study-card span {
+    color: #ffffff !important;
+}
+
+body:not(.nc-dark) .study-card .study-button {
+    background: #ffffff !important;
+    color: #087e6b !important;
+}
+
+body:not(.nc-dark) .study-card .study-button span {
+    color: #087e6b !important;
+}
+
+
+/* ---------- NURSING STUDY — DARK MODE ---------- */
+
+body.nc-dark .study-card,
+body.nc-dark .study-card h2,
+body.nc-dark .study-card p,
+body.nc-dark .study-card span {
+    color: #ffffff !important;
+}
+
+body.nc-dark .study-card .study-button {
+    background: #e7f7f3 !important;
+    color: #087e6b !important;
+    border-color: #c8e8e1 !important;
+}
+
+body.nc-dark .study-card .study-button span {
+    color: #087e6b !important;
+}
+
+
+/* ---------- CALCULATOR EXAMPLE BOXES — LIGHT MODE ---------- */
+
+body:not(.nc-dark) #nurseCalcModal .nc-example {
+    background: #eef8f5 !important;
+    color: #55706a !important;
+    border-color: #dcece8 !important;
+}
+
+body:not(.nc-dark) #nurseCalcModal .nc-example * {
+    color: #55706a !important;
+}
+
+
+/* ---------- CALCULATOR EXAMPLE BOXES — DARK MODE ---------- */
+
+body.nc-dark #nurseCalcModal .nc-example {
+    background: #263a36 !important;
+    color: #d9ebe6 !important;
+    border: 1px solid #3d5a54 !important;
+}
+
+body.nc-dark #nurseCalcModal .nc-example * {
+    color: #d9ebe6 !important;
+}
+
+
+/* ---------- CALCULATOR HEADINGS — DARK MODE ---------- */
+
+body.nc-dark #nurseCalcModal .nc-modal-body h3 {
+    color: #ffffff !important;
+}
+
+
+/* ---------- CALCULATOR HR — DARK MODE ---------- */
+
+body.nc-dark #nurseCalcModal .nc-modal-body hr {
+    border-top-color: #3b4946 !important;
+}
