@@ -1647,252 +1647,414 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-   /* =========================================================
-   BOTTOM NAVIGATION — HOME / CALCULATORS / STUDY / FAVORITES
+/* =========================================================
+   BOTTOM NAVIGATION
+   HOME / CALCULATORS / STUDY / FAVORITES
 ========================================================= */
 
-function openNavPanel(title, content) {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const old = document.querySelector(".nc-nav-panel");
-  if (old) old.remove();
+  const navItems = document.querySelectorAll(".nav-item");
 
-  const panel = document.createElement("div");
-  panel.className = "nc-nav-panel show";
-
-  panel.innerHTML = `
-    <div class="nc-nav-content">
-
-      <button class="nc-nav-close" type="button">×</button>
-
-      <h2>${title}</h2>
-
-      ${content}
-
-    </div>
-  `;
-
-  document.body.appendChild(panel);
-
-  panel.querySelector(".nc-nav-close").onclick = () => {
-    panel.remove();
-  };
-
-  panel.addEventListener("click", (e) => {
-    if (e.target === panel) {
-      panel.remove();
-    }
-  });
-}
-
-
-/* -------------------------
-   CALCULATOR LIBRARY
-------------------------- */
-
-function openCalculatorLibrary() {
-
-  const content = `
-
-    <div class="nc-nav-card">
-      <strong>💊 Medication & Dose</strong>
-
-      <button type="button" data-calculator="dose">
-        Dose Calculator
-      </button>
-
-      <button type="button" data-calculator="pediatric">
-        Pediatric Dose
-      </button>
-
-      <button type="button" data-calculator="bsa">
-        BSA Calculator
-      </button>
-    </div>
-
-
-    <div class="nc-nav-card">
-      <strong>💉 Injection & Dilution</strong>
-
-      <button type="button" data-calculator="injection">
-        Injection Volume
-      </button>
-
-      <button type="button" data-calculator="dilution">
-        Dilution
-      </button>
-    </div>
-
-
-    <div class="nc-nav-card">
-      <strong>💧 IV & Drip</strong>
-
-      <button type="button" data-calculator="iv-flow">
-        IV Flow Rate
-      </button>
-
-      <button type="button" data-calculator="drip">
-        Drip Rate
-      </button>
-    </div>
-
-
-    <div class="nc-nav-card">
-      <strong>⚠️ High-Alert Calculators</strong>
-
-      <button type="button" data-calculator="insulin">
-        Insulin
-      </button>
-
-      <button type="button" data-calculator="heparin">
-        Heparin
-      </button>
-    </div>
-
-
-    <div class="nc-nav-card">
-      <strong>🧮 Other Clinical Math</strong>
-
-      <button type="button" data-calculator="percentage">
-        Percentage
-      </button>
-
-      <button type="button" data-calculator="drug-math">
-        Drug Math
-      </button>
-    </div>
-
-
-    <div class="nc-nav-card">
-      <strong>📚 References</strong>
-
-      <button type="button" data-calculator="references">
-        Nursing References
-      </button>
-    </div>
-
-  `;
-
-  openNavPanel("🧮 Calculators", content);
-}
-
-
-/* -------------------------
-   BOTTOM NAVIGATION
-------------------------- */
-
-document.addEventListener("click", (event) => {
-
-  const nav = event.target.closest(".nav-item");
-
-  if (!nav) return;
-
-  const type = nav.dataset.nav;
-
-  document
-    .querySelectorAll(".nav-item")
-    .forEach(item => {
+  function setActiveNav(type) {
+    navItems.forEach(item => {
       item.classList.remove("active");
       item.classList.remove("nc-active");
+
+      if (item.dataset.nav === type) {
+        item.classList.add("active");
+        item.classList.add("nc-active");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------------
+     CALCULATORS PAGE
+  --------------------------------------------------------- */
+
+  function openCalculatorsPage() {
+
+    const old = document.getElementById("ncCalculatorsPage");
+    if (old) old.remove();
+
+    const page = document.createElement("div");
+    page.id = "ncCalculatorsPage";
+    page.className = "nc-full-page";
+
+    page.innerHTML = `
+      <div class="nc-full-page-header">
+
+        <div>
+          <span class="section-label">
+            CLINICAL TOOLS
+          </span>
+
+          <h2>
+            🧮 All Calculators
+          </h2>
+
+          <p>
+            All clinical calculators in one place.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          class="nc-page-close"
+          id="ncCalculatorPageClose"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div class="nc-all-calculators">
+
+        <div class="nc-calculator-group">
+          <h3>💊 Medication & Dose</h3>
+          <div class="nc-page-calcs" id="ncMedicationCalcs"></div>
+        </div>
+
+        <div class="nc-calculator-group">
+          <h3>💉 Injection & Dilution</h3>
+          <div class="nc-page-calcs" id="ncInjectionCalcs"></div>
+        </div>
+
+        <div class="nc-calculator-group">
+          <h3>💧 IV & Drip</h3>
+          <div class="nc-page-calcs" id="ncIVCalcs"></div>
+        </div>
+
+        <div class="nc-calculator-group">
+          <h3>⚠️ High-Alert Calculators</h3>
+          <div class="nc-page-calcs" id="ncAlertCalcs"></div>
+        </div>
+
+        <div class="nc-calculator-group">
+          <h3>🧮 Other Clinical Math</h3>
+          <div class="nc-page-calcs" id="ncMathCalcs"></div>
+        </div>
+
+        <div class="nc-calculator-group">
+          <h3>📚 References</h3>
+          <div class="nc-page-calcs" id="ncReferenceCalcs"></div>
+        </div>
+
+      </div>
+    `;
+
+    document.body.appendChild(page);
+
+    /* Get existing calculator cards */
+    const cards = document.querySelectorAll(
+      ".calculator-card, .alert-card, .small-card"
+    );
+
+    cards.forEach(card => {
+
+      const clone = card.cloneNode(true);
+
+      const key =
+        card.dataset.calculator ||
+        card.dataset.calc ||
+        "";
+
+      if (
+        key === "dose" ||
+        key === "pediatric" ||
+        key === "bsa"
+      ) {
+        document
+          .getElementById("ncMedicationCalcs")
+          .appendChild(clone);
+
+      } else if (
+        key === "injection" ||
+        key === "dilution"
+      ) {
+        document
+          .getElementById("ncInjectionCalcs")
+          .appendChild(clone);
+
+      } else if (
+        key === "iv-flow" ||
+        key === "drip"
+      ) {
+        document
+          .getElementById("ncIVCalcs")
+          .appendChild(clone);
+
+      } else if (
+        key === "insulin" ||
+        key === "heparin"
+      ) {
+        document
+          .getElementById("ncAlertCalcs")
+          .appendChild(clone);
+
+      } else if (
+        key === "percentage" ||
+        key === "drug-math"
+      ) {
+        document
+          .getElementById("ncMathCalcs")
+          .appendChild(clone);
+
+      } else if (
+        key === "references"
+      ) {
+        document
+          .getElementById("ncReferenceCalcs")
+          .appendChild(clone);
+      }
+
     });
 
-  nav.classList.add("active");
-  nav.classList.add("nc-active");
+    /* Close page */
+    document
+      .getElementById("ncCalculatorPageClose")
+      .addEventListener("click", () => {
+        page.remove();
+        setActiveNav("home");
 
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
 
-  /* HOME */
+    /* Make cloned cards work */
+    page.addEventListener("click", event => {
 
-  if (type === "home") {
+      const card = event.target.closest(
+        "[data-calculator], [data-calc]"
+      );
 
-    const panel = document.querySelector(".nc-nav-panel");
+      if (!card) return;
 
-    if (panel) {
-      panel.remove();
-    }
+      const key =
+        card.dataset.calculator ||
+        card.dataset.calc;
+
+      if (
+        key &&
+        typeof calculators !== "undefined" &&
+        calculators[key]
+      ) {
+        calculators[key]();
+      }
+
+    });
+
+    setActiveNav("calculators");
 
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
-
-    return;
   }
 
 
-  /* CALCULATORS */
+  /* ---------------------------------------------------------
+     STUDY
+     TEMPORARILY DISABLED
+  --------------------------------------------------------- */
 
-  if (
-    type === "calculators" ||
-    type === "calculator"
-  ) {
+  function openStudyPage() {
 
-    openCalculatorLibrary();
+    const old = document.getElementById("ncSimplePage");
+    if (old) old.remove();
 
-    return;
+    const page = document.createElement("div");
+    page.id = "ncSimplePage";
+    page.className = "nc-full-page";
+
+    page.innerHTML = `
+      <div class="nc-full-page-header">
+
+        <div>
+          <span class="section-label">
+            LEARN & PREPARE
+          </span>
+
+          <h2>
+            📚 Nursing Study
+          </h2>
+
+          <p>
+            Study modules will be added here later.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          class="nc-page-close"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div class="nc-coming-soon">
+        📚
+        <h3>Coming Soon</h3>
+        <p>
+          Nursing notes, clinical topics and exam preparation
+          will be added here in a future update.
+        </p>
+      </div>
+    `;
+
+    document.body.appendChild(page);
+
+    page.querySelector(".nc-page-close").onclick = () => {
+      page.remove();
+      setActiveNav("home");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+
+    setActiveNav("study");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
 
-  /* STUDY */
+  /* ---------------------------------------------------------
+     FAVORITES
+     TEMPORARILY DISABLED
+  --------------------------------------------------------- */
 
-  if (type === "study") {
+  function openFavoritesPage() {
 
-    openNavPanel(
-      "📚 Nursing Study",
-      `
-        <div class="nc-nav-card">
-          <strong>🩺 Nursing Notes</strong>
+    const old = document.getElementById("ncSimplePage");
+    if (old) old.remove();
+
+    const page = document.createElement("div");
+    page.id = "ncSimplePage";
+    page.className = "nc-full-page";
+
+    page.innerHTML = `
+      <div class="nc-full-page-header">
+
+        <div>
+          <span class="section-label">
+            SAVED TOOLS
+          </span>
+
+          <h2>
+            ⭐ Favorites
+          </h2>
+
           <p>
-            Clinical notes and nursing study material.
+            Your favorite calculators will appear here later.
           </p>
         </div>
 
-        <div class="nc-nav-card">
-          <strong>🧠 Clinical Topics</strong>
-          <p>
-            Nursing and clinical topics for learning.
-          </p>
-        </div>
+        <button
+          type="button"
+          class="nc-page-close"
+        >
+          ×
+        </button>
 
-        <div class="nc-nav-card">
-          <strong>📝 Exam Preparation</strong>
-          <p>
-            Nursing calculations, revision and exam preparation.
-          </p>
-        </div>
+      </div>
 
-        <div class="nc-nav-card">
-          <strong>💊 Drug & Medication Study</strong>
-          <p>
-            Medication-related learning and study material.
-          </p>
-        </div>
-      `
-    );
+      <div class="nc-coming-soon">
+        ⭐
+        <h3>Favorites Coming Soon</h3>
+        <p>
+          You will be able to save your frequently used
+          calculators here.
+        </p>
+      </div>
+    `;
 
-    return;
+    document.body.appendChild(page);
+
+    page.querySelector(".nc-page-close").onclick = () => {
+      page.remove();
+      setActiveNav("home");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+
+    setActiveNav("favorites");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
 
-  /* FAVORITES */
+  /* ---------------------------------------------------------
+     NAVIGATION CLICK
+  --------------------------------------------------------- */
 
-  if (type === "favorites") {
+  navItems.forEach(nav => {
 
-    openNavPanel(
-      "⭐ Favorites",
-      `
-        <div class="nc-nav-card">
-          <strong>⭐ No Favorites Yet</strong>
-          <p>
-            Your saved calculators will appear here.
-          </p>
-        </div>
-      `
-    );
+    nav.addEventListener("click", event => {
 
-    return;
-  }
+      event.preventDefault();
+
+      const type = nav.dataset.nav;
+
+      if (type === "home") {
+
+        const calculatorPage =
+          document.getElementById("ncCalculatorsPage");
+
+        const simplePage =
+          document.getElementById("ncSimplePage");
+
+        if (calculatorPage) calculatorPage.remove();
+        if (simplePage) simplePage.remove();
+
+        setActiveNav("home");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+        return;
+      }
+
+
+      if (type === "calculators") {
+        openCalculatorsPage();
+        return;
+      }
+
+
+      if (type === "study") {
+        openStudyPage();
+        return;
+      }
+
+
+      if (type === "favorites") {
+        openFavoritesPage();
+        return;
+      }
+
+    });
+
+  });
 
 });
 
+   
   /* ================= PWA INSTALL ================= */
 
   let deferredPrompt = null;
