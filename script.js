@@ -1652,7 +1652,8 @@ document.addEventListener("DOMContentLoaded", () => {
    HOME / CALCULATORS / STUDY / FAVORITES
 ========================================================= */
 
-
+document.addEventListener("DOMContentLoaded", () => {
+   
   const navItems = document.querySelectorAll(".nav-item");
 
   function setActiveNav(type) {
