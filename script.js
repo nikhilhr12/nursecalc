@@ -2031,12 +2031,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
 
-      if (type === "calculators") {
-        openCalculatorsPage();
-        return;
-      }
+       if (type === "calculators") {
+  const calculatorPage = document.getElementById("calculatorsPage");
+  const mainContent = document.querySelector(".main-content");
 
+  if (calculatorPage) calculatorPage.style.display = "block";
+  if (mainContent) mainContent.style.display = "none";
 
+  setActiveNav("calculators");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  return;
+}
+      
       if (type === "study") {
         openStudyPage();
         return;
