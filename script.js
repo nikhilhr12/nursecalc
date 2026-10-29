@@ -1141,7 +1141,6 @@ document.addEventListener("DOMContentLoaded", () => {
      CARD CLICK HANDLER
   ========================================================= */
 
-  document.addEventListener("click", (event) => {
 
     const element =
       event.target.closest(
