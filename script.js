@@ -2062,7 +2062,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-});
 
    
   /* ================= PWA INSTALL ================= */
